@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Scavenger : Controllable
 {
+    [SerializeField] CharacterController characterController = null;
     public override void Control()
     {
+
     }
 }
