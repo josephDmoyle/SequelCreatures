@@ -12,4 +12,6 @@ public class Midwife : Controllable
         characterController.Move(transform.right * horizontal);
         characterController.Move(transform.forward * vertical);
     }
+
+
 }
