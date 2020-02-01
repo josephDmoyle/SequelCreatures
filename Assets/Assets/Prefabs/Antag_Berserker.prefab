@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   navMeshAgent: {fileID: 5473272311981970580}
-  coolDown: 1
+  coolDown: 0.5
   attackBox: {fileID: 7120230206131299845}
 --- !u!54 &5473272311981970577
 Rigidbody:
