@@ -6,12 +6,15 @@ public class Builder : Controllable
 {
     [SerializeField] private List<GameObject> barriers = new List<GameObject>();
     [SerializeField] private bool isDebug = true;
+    [SerializeField] private float buildCooldown = .5f;
+    [SerializeField] CharacterController characterController = null;
+    [SerializeField] GameObject trapPrefab;
 
     private Vector3 raycastDirect = Vector3.right;
+    private bool onCooldown = false;
 
     int barrierSelected = 0;
 
-    [SerializeField] CharacterController characterController = null;
     public override void Control()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -24,9 +27,18 @@ public class Builder : Controllable
             SelectedBarrier(barrierSelected + 1);
         }
 
-        if (Input.GetButtonDown("Barrier"))
+        if (Input.GetButton("Barrier"))
         {
-            Build();
+            if (!onCooldown)
+            {
+                Invoke("Build", buildCooldown);
+                onCooldown = true;
+            }
+        }
+
+        if (Input.GetButtonDown("Trap"))
+        {
+            Instantiate(trapPrefab, transform.position, Quaternion.identity);
         }
 
         DrawDebug();
@@ -60,6 +72,7 @@ public class Builder : Controllable
             }
 
         }
+        onCooldown = false;
     }
 
     private void DrawDebug()
