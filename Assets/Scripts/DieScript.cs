@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DieScript : MonoBehaviour
 {
+    [SerializeField] GameObject spawnPosition;
     public float speed;
     public GameObject PitFall;
     public float targetX;
@@ -53,7 +54,7 @@ public class DieScript : MonoBehaviour
     {
         for(int i = 0; i < minimum; i++)
         {
-            Instantiate(grunt, new Vector3(i * 2.0F, 2.07f, -10.08f), Quaternion.identity);
+            Instantiate(grunt, spawnPosition.transform.position, Quaternion.identity);
 
         }
     }

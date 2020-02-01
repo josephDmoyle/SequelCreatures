@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private List<GameObject> cameras = new List<GameObject>();
     [SerializeField] private List<GameObject> characters = new List<GameObject>();
 
-    [SerializeField] private GameController GC = null;
-
     int currentCharacter;
 
     // Start is called before the first frame update
@@ -38,7 +36,6 @@ public class PlayerController : MonoBehaviour
             newCharacter = 0;
         }
         cameras[newCharacter].SetActive(true);
-
 
         cameras[currentCharacter].SetActive(false);
         player = characters[newCharacter].GetComponent<Controllable>();
