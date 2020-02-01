@@ -10,7 +10,7 @@ public class Grunt_Shooter : Grunt
     [SerializeField] float projectileSpeed = 10f;
 
     private List<GameObject> targets = new List<GameObject>();
-    private float timer = 0f;
+    private float timer = 0f, marchingSpeed = 1f;
     private Queue<Rigidbody> magazine = new Queue<Rigidbody>();
 
     protected override void Start()
@@ -20,6 +20,7 @@ public class Grunt_Shooter : Grunt
         endSeeEvent.AddListener(EndSee);
         foreach (Rigidbody rb in projectiles)
             magazine.Enqueue(rb);
+        marchingSpeed = navMeshAgent.speed;
     }
 
     private void FixedUpdate()
@@ -49,6 +50,7 @@ public class Grunt_Shooter : Grunt
                     {
                         transform.LookAt(targets[0].transform.position);
                         navMeshAgent.isStopped = true;
+
                         timer += Time.fixedDeltaTime;
                         if (timer >= countDown)
                             state = Status.Attacking;
