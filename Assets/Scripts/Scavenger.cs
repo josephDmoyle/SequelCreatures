@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Controllable : MonoBehaviour
+public class Scavenger : Controllable
 {
-    public abstract void Control();
+    public override void Control()
+    {
+    }
 }
