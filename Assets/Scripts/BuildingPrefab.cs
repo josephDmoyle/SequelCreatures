@@ -25,10 +25,7 @@ public class BuildingPrefab : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        //_renderer.GetPropertyBlock(_propBlock);
-        //_propBlock.SetColor("_Color", Color.Lerp(Color1, Color2, (Mathf.Sin(Time.time * Speed + Offset) + 1) / 2f));
-        //Color currentColor = _propBlock.GetColor("_Color");
-        //_renderer.SetPropertyBlock(_propBlock);
+
     }
 
     public void Interact()
