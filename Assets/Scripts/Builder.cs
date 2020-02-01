@@ -5,6 +5,9 @@ using UnityEngine;
 public class Builder : Controllable
 {
     [SerializeField] private List<GameObject> barriers = new List<GameObject>();
+    [SerializeField] private bool isDebug = true;
+
+    private Vector3 raycastDirect = Vector3.right;
 
     int barrierSelected = 0;
 
@@ -25,6 +28,8 @@ public class Builder : Controllable
         {
             Build();
         }
+
+        DrawDebug();
     }
 
     void SelectedBarrier(int choice)
@@ -38,6 +43,31 @@ public class Builder : Controllable
 
     void Build()
     {
-        Instantiate(barriers[barrierSelected], transform.position, Quaternion.identity);
+        //On interact, raycast to first object in facing direction
+        Vector3 facingDirection = transform.TransformDirection(raycastDirect) * 3;
+        int interactableLayerMask = LayerMask.GetMask("Interactable");
+        //RaycastHit hit = Physics.Raycast(transform.position, facingDirection, 3, interactableLayerMask);
+        RaycastHit hit;
+        Physics.Raycast(transform.position, facingDirection, out hit, 3, interactableLayerMask);
+
+        if (hit.collider)
+        {
+            //If an object is hit, check if it's interactable. Should be if it's on that layer
+            IInteractable interactable = hit.transform.gameObject.GetComponent<IInteractable>();
+            if (interactable != null)
+            {
+                interactable.Interact();
+            }
+
+        }
+    }
+
+    private void DrawDebug()
+    {
+        if (isDebug)
+        {
+            Vector3 rayDir = transform.TransformDirection(raycastDirect) * 3;
+            Debug.DrawRay(transform.position, rayDir, Color.red);
+        }
     }
 }
