@@ -1431,6 +1431,9 @@ MonoBehaviour:
   junk:
   - {fileID: 7143264276890010093, guid: f0c857a2bdcf4534f994cb2c99213931, type: 3}
   - {fileID: 284769403881214316, guid: 650859ff6c9ab204a88a3632d558a0a6, type: 3}
+  traps:
+  - {fileID: 3967353017270289518, guid: 899a3906c9d3c664893b8c347c362f16, type: 3}
+  dumpTime: 1000
   materials: 0
 --- !u!1001 &5343821012063249544
 PrefabInstance:
