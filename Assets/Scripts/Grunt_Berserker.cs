@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grunt_Shooter : Grunt
+public class Grunt_Berserker : Grunt
 {
     [SerializeField] Transform shootPosition = null;
     [SerializeField] private List<Rigidbody> projectiles = new List<Rigidbody>();

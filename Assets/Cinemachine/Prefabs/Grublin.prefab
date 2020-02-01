@@ -83,10 +83,6 @@ MonoBehaviour:
   - {fileID: 6923543583934376703}
   countDown: 1
   projectileSpeed: 20
-  shootingSpeed: 0.3
-  mask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!54 &2163400898958000029
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -347,7 +343,7 @@ PrefabInstance:
     - target: {fileID: 5557673883364926654, guid: d6b043cbf9b8af6438ce49c3695bab13,
         type: 3}
       propertyPath: m_Name
-      value: Projectile
+      value: Projectile 1
       objectReference: {fileID: 0}
     - target: {fileID: 5557673883364926654, guid: d6b043cbf9b8af6438ce49c3695bab13,
         type: 3}
@@ -433,7 +429,7 @@ PrefabInstance:
     - target: {fileID: 5557673883364926654, guid: d6b043cbf9b8af6438ce49c3695bab13,
         type: 3}
       propertyPath: m_Name
-      value: Projectile (1)
+      value: Projectile 2
       objectReference: {fileID: 0}
     - target: {fileID: 5557673883364926654, guid: d6b043cbf9b8af6438ce49c3695bab13,
         type: 3}
@@ -519,7 +515,7 @@ PrefabInstance:
     - target: {fileID: 5557673883364926654, guid: d6b043cbf9b8af6438ce49c3695bab13,
         type: 3}
       propertyPath: m_Name
-      value: Projectile (2)
+      value: Projectile 3
       objectReference: {fileID: 0}
     - target: {fileID: 5557673883364926654, guid: d6b043cbf9b8af6438ce49c3695bab13,
         type: 3}

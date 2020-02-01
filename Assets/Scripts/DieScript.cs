@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class DieScript : MonoBehaviour
 {
-
     public float speed;
     public GameObject PitFall;
     public float targetX;
 
+    bool play = false;
+
     public void Die()
     {
-        
-        
-        while (transform.position.x > targetX)
-        {
-            print("Success");
-            //float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, PitFall.transform.position, speed * Time.deltaTime);
-        }
-       
+        play = true;  
+    }
+
+    private void FixedUpdate()
+    {
+        if (play)
+            transform.position = Vector3.MoveTowards(transform.position, PitFall.transform.position, speed * Time.fixedDeltaTime);
     }
 }

@@ -22,7 +22,7 @@ public abstract class Grunt : MonoBehaviour
         grunts[gameObject] = this;
     }
 
-    private void OnDestroy()
+    protected virtual void OnDestroy()
     {
         grunts.Remove(gameObject);
     }
