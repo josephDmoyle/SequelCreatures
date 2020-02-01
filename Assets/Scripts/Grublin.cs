@@ -26,4 +26,12 @@ public class Grublin : MonoBehaviour
     private void FixedUpdate()
     {
     }
+
+    private void OnTriggerEnter(Collider iOther)
+    {
+        if (!iOther.isTrigger)
+        {
+            Debug.Log(transform.name + " sees: " + iOther.transform.name);
+        }
+    }
 }
