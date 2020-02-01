@@ -1,6 +1,7 @@
 ﻿//using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -8,8 +9,15 @@ public class GameController : MonoBehaviour
     [SerializeField] private List<GameObject> junk = new List<GameObject>();
     [SerializeField] private List<GameObject> traps = new List<GameObject>();
 
+    [SerializeField] private Slider ScavengeMeter = null;
+
+    //public static Dictionary<GameObject, Junk> currentJunk = new Dictionary<GameObject, Junk>();
+
     private int dumpTimer = 0;
-    [SerializeField] int dumpTime = 1000;
+    [SerializeField] private int dumpTime = 2000;
+
+    private int scavengeTimer = 0;
+    [SerializeField] private int scavengeTime = 500;
 
     public int materials = 0;
 
@@ -23,11 +31,21 @@ public class GameController : MonoBehaviour
     void FixedUpdate()
     {
         dumpTimer++;
-        if(dumpTimer >= 1000)
+        scavengeTimer++;
+        if (dumpTimer >= dumpTime)
         {
-            SpawnJunk(15);
-            dumpTimer = 0;
+            SpawnJunk(30);
         }
+
+        if(scavengeTimer < scavengeTime)
+        {
+            ScavengeMeter.value = (float)scavengeTimer / (float)scavengeTime;
+        }
+        else if (dumpTimer < dumpTime)
+        {
+            ScavengeMeter.value = ((float)dumpTimer - scavengeTime) / ((float)dumpTime - scavengeTime);
+        }
+        
     }
 
     void SpawnJunk(int junkAmount)
@@ -45,5 +63,8 @@ public class GameController : MonoBehaviour
 
             Instantiate(traps[trapIndex], new Vector3(Random.Range(-150, -51), 0, Random.Range(-50, 50)), Quaternion.identity);
         }
+
+        dumpTimer = 0;
+        scavengeTimer = 0;
     }
 }

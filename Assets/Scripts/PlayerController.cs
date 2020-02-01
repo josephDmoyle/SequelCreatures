@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
         }
         cameras[newCharacter].SetActive(true);
 
-
         cameras[currentCharacter].SetActive(false);
         player = characters[newCharacter].GetComponent<Controllable>();
         currentCharacter = newCharacter;
