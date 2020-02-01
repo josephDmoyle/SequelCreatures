@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Hivemind : MonoBehaviour
 {
     public static Dictionary<Team, Hivemind> hiveminds = new Dictionary<Team, Hivemind>();
+
     public class PursueEvent : UnityEvent<Transform> { };
     public PursueEvent pursueEvent = new PursueEvent();
 

@@ -28,6 +28,6 @@ public class Health : MonoBehaviour
 
     public void Death()
     {
-        Destroy(gameObject);
+        Destroy(transform.root.gameObject);
     }
 }
