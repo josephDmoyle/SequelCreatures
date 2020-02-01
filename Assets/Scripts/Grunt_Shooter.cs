@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grunt_Shooter : MonoBehaviour
+public class Grunt_Shooter : Grunt
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Transform shootPosition = null;
 
-    // Update is called once per frame
-    void Update()
+    protected override void OnTriggerEnter(Collider iOther)
     {
-        
+        if (!iOther.isTrigger)
+            if (grublins.ContainsKey(iOther.gameObject))
+                Debug.Log(transform.name + " sees: " + iOther.transform.name);
     }
 }
