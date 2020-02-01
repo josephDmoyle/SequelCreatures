@@ -6,10 +6,20 @@ public class Grunt_Shooter : Grunt
 {
     [SerializeField] Transform shootPosition = null;
 
-    protected override void OnTriggerEnter(Collider iOther)
+
+    private void Start()
     {
-        if (!iOther.isTrigger)
-            if (grublins.ContainsKey(iOther.gameObject))
-                Debug.Log(transform.name + " sees: " + iOther.transform.name);
+        beginSeeEvent.AddListener(BeginSee);
+        endSeeEvent.AddListener(EndSee);
+    }
+
+    void BeginSee(GameObject iGameObject)
+    {
+
+    }
+
+    void EndSee(GameObject iGameObject)
+    {
+
     }
 }
