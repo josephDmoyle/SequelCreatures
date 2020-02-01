@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 27404617}
   - component: {fileID: 27404616}
   - component: {fileID: 27404615}
+  - component: {fileID: 27404621}
   m_Layer: 10
   m_Name: Hero
   m_TagString: Untagged
@@ -234,6 +235,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27404621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27404614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5740a8155456d448adad7a7b82959cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 10
 --- !u!1 &86474127
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +355,7 @@ GameObject:
   - component: {fileID: 159650526}
   - component: {fileID: 159650527}
   - component: {fileID: 159650528}
+  - component: {fileID: 159650529}
   m_Layer: 10
   m_Name: Grunt
   m_TagString: Untagged
@@ -441,6 +456,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &159650529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159650522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5740a8155456d448adad7a7b82959cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 10
 --- !u!1 &389826888
 GameObject:
   m_ObjectHideFlags: 0

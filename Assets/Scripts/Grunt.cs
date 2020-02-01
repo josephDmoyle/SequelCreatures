@@ -9,7 +9,6 @@ public class Grunt : MonoBehaviour
 
     [SerializeField] NavMeshAgent navMeshAgent = null;
     [SerializeField] Team team = Team.Antags;
-    [SerializeField] int health = 10;
 
     private void Awake()
     {
@@ -37,7 +36,14 @@ public class Grunt : MonoBehaviour
     protected virtual void OnTriggerEnter(Collider iOther)
     {
         if (!iOther.isTrigger)
-            if(grublins.ContainsKey(iOther.gameObject))
+            if (grublins.ContainsKey(iOther.gameObject))
                 Debug.Log(transform.name + " sees: " + iOther.transform.name);
+    }
+
+    protected virtual void OnTriggerExit(Collider iOther)
+    {
+        if (!iOther.isTrigger)
+            if (grublins.ContainsKey(iOther.gameObject))
+                Debug.Log(transform.name + " looses sight of: " + iOther.transform.name);
     }
 }
