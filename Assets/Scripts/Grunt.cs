@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.AI;
 
-public class Grunt : MonoBehaviour
+public abstract class Grunt : MonoBehaviour
 {
     public static Dictionary<GameObject, Grunt> grublins = new Dictionary<GameObject, Grunt>();
+
+
 
     [SerializeField] NavMeshAgent navMeshAgent = null;
     [SerializeField] Team team = Team.Antags;

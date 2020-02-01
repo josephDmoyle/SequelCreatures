@@ -193,7 +193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 27404614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b69b63427f768b429989256e4856d1b, type: 3}
+  m_Script: {fileID: 11500000, guid: d57773c08c3c4114ca4463c075ec888a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 27404619}
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 159650522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b69b63427f768b429989256e4856d1b, type: 3}
+  m_Script: {fileID: 11500000, guid: d57773c08c3c4114ca4463c075ec888a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 159650523}
