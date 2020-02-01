@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private List<GameObject> cameras = new List<GameObject>();
     [SerializeField] private List<GameObject> characters = new List<GameObject>();
 
-    [SerializeField] private GameController GC = null;
-
     int currentCharacter;
 
     // Start is called before the first frame update
