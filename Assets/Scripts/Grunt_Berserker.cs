@@ -5,6 +5,7 @@ using UnityEngine;
 public class Grunt_Berserker : Grunt
 {
     [SerializeField] [Range(0.1f, 10f)] float coolDown = 1f;
+    [SerializeField] Collider attackBox = null;
 
     private List<GameObject> targets = new List<GameObject>();
     private float timer = 0f, marchingSpeed = 1f;
@@ -33,7 +34,7 @@ public class Grunt_Berserker : Grunt
                     if (targets.Count > 0)
                         state = Status.Engaging;
 
-                    timer = 0f;
+                    timer = coolDown;
                     break;
                 }
 
@@ -42,16 +43,15 @@ public class Grunt_Berserker : Grunt
                     targets.RemoveAll(t => t == null);
                     if (targets.Count > 0)
                     {
-                        transform.LookAt(targets[0].transform.position);
-                        navMeshAgent.isStopped = true;
-
+                        navMeshAgent.SetDestination(targets[0].transform.position);
+                        if (navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance)
+                            transform.LookAt(navMeshAgent.destination);
                         timer += Time.fixedDeltaTime;
                         if (timer >= coolDown)
                             state = Status.Attacking;
                     }
                     else
                     {
-                        navMeshAgent.isStopped = false;
                         state = Status.Marching;
                     }
                     break;
@@ -59,6 +59,7 @@ public class Grunt_Berserker : Grunt
 
             case Status.Attacking:
                 {
+                    attackBox.gameObject.SetActive(true);
                     timer = 0f;
                     state = Status.Engaging;
                     break;

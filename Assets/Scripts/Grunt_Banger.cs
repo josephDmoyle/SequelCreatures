@@ -2,33 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grunt_Shooter : Grunt
+public class Grunt_Banger : Grunt
 {
-    [SerializeField] Transform shootPosition = null;
-    [SerializeField] private List<Rigidbody> projectiles = new List<Rigidbody>();
-    [SerializeField] [Range(0.1f, 10f)] float coolDown = 1f;
-    [SerializeField] Vector3 projectileSpeed = Vector3.forward;
+    [SerializeField] GameObject explosion = null;
+    [SerializeField] float deathSprint = 15f;
 
     private List<GameObject> targets = new List<GameObject>();
     private float timer = 0f, marchingSpeed = 1f;
-    private Queue<Rigidbody> magazine = new Queue<Rigidbody>();
 
     protected override void Start()
     {
         base.Start();
         beginSeeEvent.AddListener(BeginSee);
         endSeeEvent.AddListener(EndSee);
-        foreach (Rigidbody rb in projectiles)
-            magazine.Enqueue(rb);
         marchingSpeed = navMeshAgent.speed;
+        explosion.transform.parent = null;
     }
 
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        foreach (Rigidbody rb in projectiles)
-            if (rb)
-                Destroy(rb.gameObject);
+        if (explosion)
+        {
+            explosion.transform.position = transform.position;
+            explosion.SetActive(true);
+        }
     }
 
     private void FixedUpdate()
@@ -46,7 +44,6 @@ public class Grunt_Shooter : Grunt
                     //Engage a target if there is one
                     if (targets.Count > 0)
                         state = Status.Engaging;
-
                     break;
                 }
 
@@ -55,16 +52,15 @@ public class Grunt_Shooter : Grunt
                     targets.RemoveAll(t => t == null);
                     if (targets.Count > 0)
                     {
-                        transform.LookAt(targets[0].transform.position);
-                        navMeshAgent.isStopped = true;
-
+                        navMeshAgent.speed = deathSprint;
+                        navMeshAgent.SetDestination(targets[0].transform.position);
                         timer += Time.fixedDeltaTime;
-                        if (timer >= coolDown)
+                        if (Vector3.Distance(transform.position, targets[0].transform.position) < navMeshAgent.stoppingDistance)
                             state = Status.Attacking;
                     }
                     else
                     {
-                        navMeshAgent.isStopped = false;
+                        navMeshAgent.speed = marchingSpeed;
                         state = Status.Marching;
                     }
                     break;
@@ -72,14 +68,8 @@ public class Grunt_Shooter : Grunt
 
             case Status.Attacking:
                 {
-                    Rigidbody rb = magazine.Dequeue();
-                    rb.transform.parent = null;
-                    rb.gameObject.SetActive(true);
-                    rb.position = shootPosition.position;
-                    rb.velocity = transform.TransformDirection(projectileSpeed);
-                    magazine.Enqueue(rb);
-                    timer = 0f;
-                    state = Status.Engaging;
+                    Debug.Log("BANG");
+                    Destroy(gameObject);
                     break;
                 }
         }

@@ -42,10 +42,8 @@ public abstract class Grunt : MonoBehaviour
         if (!iOther.isTrigger)
             if (grunts.ContainsKey(iOther.gameObject))
             {
-                Debug.Log(transform.name + " sees: " + iOther.transform.name);
                 if (beginSeeEvent != null)
                     beginSeeEvent.Invoke(iOther.gameObject);
-
             }
     }
 
@@ -54,7 +52,6 @@ public abstract class Grunt : MonoBehaviour
         if (!iOther.isTrigger)
             if (grunts.ContainsKey(iOther.gameObject))
             {
-                Debug.Log(transform.name + " looses sight of: " + iOther.transform.name);
                 if (endSeeEvent != null)
                     endSeeEvent.Invoke(iOther.gameObject);
             }
