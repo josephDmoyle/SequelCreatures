@@ -5,6 +5,8 @@ using UnityEngine;
 public class BuildingPrefab : MonoBehaviour, IInteractable
 {
     public Color Color1, Color2;
+    public int resourceNeed;
+    public int resourcesSpent;
     private Renderer _renderer;
     private MaterialPropertyBlock _propBlock;
     private float Speed = 1f;
@@ -30,6 +32,7 @@ public class BuildingPrefab : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        resourcesSpent += 1;
         Debug.Log("Building interaction");
         Color newColor = _propBlock.GetColor("_Color");
         newColor.a += .01f;
