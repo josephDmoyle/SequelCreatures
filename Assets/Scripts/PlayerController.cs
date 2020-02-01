@@ -7,15 +7,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Controllable player;
     [SerializeField] private List<GameObject> cameras = new List<GameObject>();
     [SerializeField] private List<GameObject> characters = new List<GameObject>();
-    //[SerializeField] GameObject JunkyardCam;
-    //[SerializeField] GameObject GreenRoomCam;
+
+    [SerializeField] private GameController GC = null;
 
     int currentCharacter;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame

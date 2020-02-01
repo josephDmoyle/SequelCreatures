@@ -7,7 +7,7 @@ public class Grunt_Shooter : Grunt
     [SerializeField] Transform shootPosition = null;
     [SerializeField] private List<Rigidbody> projectiles = new List<Rigidbody>();
     [SerializeField] [Range(0.1f, 10f)] float coolDown = 1f;
-    [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] Vector3 projectileSpeed = Vector3.forward;
 
     private List<GameObject> targets = new List<GameObject>();
     private float timer = 0f, marchingSpeed = 1f;
@@ -47,7 +47,6 @@ public class Grunt_Shooter : Grunt
                     if (targets.Count > 0)
                         state = Status.Engaging;
 
-                    timer = 0f;
                     break;
                 }
 
@@ -77,7 +76,7 @@ public class Grunt_Shooter : Grunt
                     rb.transform.parent = null;
                     rb.gameObject.SetActive(true);
                     rb.position = shootPosition.position;
-                    rb.velocity = shootPosition.forward.normalized * projectileSpeed;
+                    rb.velocity = transform.TransformDirection(projectileSpeed);
                     magazine.Enqueue(rb);
                     timer = 0f;
                     state = Status.Engaging;

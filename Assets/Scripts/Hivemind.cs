@@ -29,7 +29,6 @@ public class Hivemind : MonoBehaviour
             if (pursueEvent != null)
                 pursueEvent.Invoke(goal);
             timer = 0f;
-            Debug.Log("chug");
         }
     }
 }

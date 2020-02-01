@@ -81,8 +81,8 @@ MonoBehaviour:
   - {fileID: 2507078294613462478}
   - {fileID: 6807287589756648701}
   - {fileID: 6923543583934376703}
-  countDown: 1
-  projectileSpeed: 20
+  coolDown: 1
+  projectileSpeed: {x: 0, y: 0, z: 20}
 --- !u!54 &2163400898958000029
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &2163400898958000035
 BoxCollider:
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5740a8155456d448adad7a7b82959cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 10
+  hitpoints: 8
 --- !u!1 &5418042858259345850
 GameObject:
   m_ObjectHideFlags: 0

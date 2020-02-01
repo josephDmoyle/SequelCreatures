@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8919010383264409822}
   - component: {fileID: 8919010383264409821}
   - component: {fileID: 8919010383264409817}
+  - component: {fileID: 1229144603382322766}
   m_Layer: 12
   m_Name: BuildingPrefab
   m_TagString: Untagged
@@ -105,5 +106,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437cf6c900168d8439f13c0c135ad9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Color1: {r: 0.5137255, g: 0.5137255, b: 0.5137255, a: 0}
-  Color2: {r: 0.5137255, g: 0.5137255, b: 0.5137255, a: 1}
+  resourceNeed: 5
+  resourcesSpent: 0
+  isFinished: 0
+--- !u!208 &1229144603382322766
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919010383264409820}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class BuildingPrefab : MonoBehaviour, IInteractable
 {
-    public Color Color1, Color2;
     public int resourceNeed;
     public int resourcesSpent;
+    public bool isFinished;
     private Renderer _renderer;
     private MaterialPropertyBlock _propBlock;
-    private float Speed = 1f;
-    private float Offset = 1f;
 
     void Awake()
     {
@@ -32,13 +30,20 @@ public class BuildingPrefab : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        resourcesSpent += 1;
-        Debug.Log("Building interaction");
-        Color newColor = _propBlock.GetColor("_Color");
-        newColor.a += .01f;
-        Debug.Log("New Color:" + newColor);
-        _propBlock.SetColor("_Color", newColor);
-        Debug.Log("New Color:" + newColor);
-        _renderer.SetPropertyBlock(_propBlock);
+        if (resourcesSpent < resourceNeed)
+        {
+            resourcesSpent += 1;
+            Color newColor = _propBlock.GetColor("_Color");
+            newColor.b = 209f / 255f;
+            newColor.g = 209f / 255f;
+            newColor.r = 209f / 255f;
+            newColor.a = ((float)resourcesSpent / (float)resourceNeed);
+            _propBlock.SetColor("_Color", newColor);
+            _renderer.SetPropertyBlock(_propBlock);
+        }
+        else
+        {
+            isFinished = true;
+        }
     }
 }

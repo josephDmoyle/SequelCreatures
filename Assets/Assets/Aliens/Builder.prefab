@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2204791120589747815}
   - component: {fileID: 786174661962622338}
   - component: {fileID: 5232835484761657244}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BuilderModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6362092936536542056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.7, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6770056180817671661}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 6770056180817671661}
   - component: {fileID: -5473849696486252106}
   - component: {fileID: 5949896183799485075}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Builder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8151685216825659559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 120.2, y: 9.7, z: -7.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2747999069351772741}
@@ -155,4 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0bd8795e5ddb84b98400904f202b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barriers: []
   characterController: {fileID: 0}
