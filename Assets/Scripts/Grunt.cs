@@ -8,7 +8,8 @@ public abstract class Grunt : MonoBehaviour
 {
     public static Dictionary<GameObject, Grunt> grublins = new Dictionary<GameObject, Grunt>();
 
-
+    public class SeeEvent : UnityEvent<GameObject> { };
+    public SeeEvent beginSeeEvent = new SeeEvent(), endSeeEvent = new SeeEvent();
 
     [SerializeField] NavMeshAgent navMeshAgent = null;
     [SerializeField] Team team = Team.Antags;
@@ -40,13 +41,22 @@ public abstract class Grunt : MonoBehaviour
     {
         if (!iOther.isTrigger)
             if (grublins.ContainsKey(iOther.gameObject))
+            {
                 Debug.Log(transform.name + " sees: " + iOther.transform.name);
+                if (beginSeeEvent != null)
+                    beginSeeEvent.Invoke(iOther.gameObject);
+
+            }
     }
 
     protected virtual void OnTriggerExit(Collider iOther)
     {
         if (!iOther.isTrigger)
             if (grublins.ContainsKey(iOther.gameObject))
+            {
                 Debug.Log(transform.name + " looses sight of: " + iOther.transform.name);
+                if (endSeeEvent != null)
+                    endSeeEvent.Invoke(iOther.gameObject);
+            }
     }
 }
