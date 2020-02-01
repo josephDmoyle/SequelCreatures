@@ -3,12 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Grublin : MonoBehaviour
+public class Grunt : MonoBehaviour
 {
-    public static Dictionary<GameObject, Grublin> grublins = new Dictionary<GameObject, Grublin>();
+    public static Dictionary<GameObject, Grunt> grublins = new Dictionary<GameObject, Grunt>();
 
     [SerializeField] NavMeshAgent navMeshAgent = null;
     [SerializeField] Team team = Team.Antags;
+    [SerializeField] int health = 10;
+
+    private void Awake()
+    {
+        grublins[gameObject] = this;
+    }
+
+    private void OnDestroy()
+    {
+        grublins.Remove(gameObject);
+    }
 
     private void Start()
     {
@@ -23,15 +34,10 @@ public class Grublin : MonoBehaviour
             navMeshAgent.SetDestination(transform.position);
     }
 
-    private void FixedUpdate()
-    {
-    }
-
-    private void OnTriggerEnter(Collider iOther)
+    protected virtual void OnTriggerEnter(Collider iOther)
     {
         if (!iOther.isTrigger)
-        {
-            Debug.Log(transform.name + " sees: " + iOther.transform.name);
-        }
+            if(grublins.ContainsKey(iOther.gameObject))
+                Debug.Log(transform.name + " sees: " + iOther.transform.name);
     }
 }

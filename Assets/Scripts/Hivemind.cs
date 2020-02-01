@@ -10,8 +10,10 @@ public class Hivemind : MonoBehaviour
     public PursueEvent pursueEvent = new PursueEvent();
 
     [SerializeField] Team team = Team.Antags;
-
+    [SerializeField] float interval = 1f;
     [SerializeField] Transform goal = null;
+
+    float timer = 0f;
 
     private void Awake()
     {
@@ -20,8 +22,14 @@ public class Hivemind : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(pursueEvent != null)
-            pursueEvent.Invoke(goal);
+        timer += Time.fixedDeltaTime;
+        if(timer >= interval)
+        {
+            if (pursueEvent != null)
+                pursueEvent.Invoke(goal);
+            timer = 0f;
+            Debug.Log("chug");
+        }
     }
 }
 
