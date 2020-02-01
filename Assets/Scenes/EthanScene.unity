@@ -1475,9 +1475,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949896183799485075, guid: 469280267df2d6d459cf50b660d3ad78,
         type: 3}
+      propertyPath: barriers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949896183799485075, guid: 469280267df2d6d459cf50b660d3ad78,
+        type: 3}
       propertyPath: characterController
       value: 
       objectReference: {fileID: 899981967}
+    - target: {fileID: 5949896183799485075, guid: 469280267df2d6d459cf50b660d3ad78,
+        type: 3}
+      propertyPath: barriers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8027594122157713874, guid: e2ccaee5e64126d478d827a26b7d0184,
+        type: 3}
     - target: {fileID: 6770056180817671661, guid: 469280267df2d6d459cf50b660d3ad78,
         type: 3}
       propertyPath: m_LocalPosition.x
