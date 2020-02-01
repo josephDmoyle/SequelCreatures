@@ -5,7 +5,7 @@ using UnityEngine;
 public class Damager_Explosion : MonoBehaviour
 {
     [SerializeField] int damage = 4;
-    [SerializeField] float timeLength = 1f;
+    [SerializeField] float timeLength = 1f, explosionForce = 10f, explosionRadius = 30f;
     [SerializeField] bool destroyOnFinish = false;
 
     float timer = 0f;
@@ -33,6 +33,10 @@ public class Damager_Explosion : MonoBehaviour
         if (Health.healths.ContainsKey(iCollision.gameObject))
         {
             Health.healths[iCollision.gameObject].Damage(damage);
+        }
+        else if(iCollision.attachedRigidbody)
+        {
+            iCollision.attachedRigidbody.AddExplosionForce(explosionForce, iCollision.ClosestPoint(transform.position), 30f);
         }
     }
 }

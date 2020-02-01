@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5473272311981970576}
   - component: {fileID: 5473272311981970607}
   m_Layer: 10
-  m_Name: Banger
+  m_Name: Antag_Banger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,6 +301,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   timeLength: 0.2
+  explosionForce: 200
+  explosionRadius: 8
   destroyOnFinish: 1
 --- !u!54 &1860369835
 Rigidbody:
