@@ -7,17 +7,10 @@ public class DieScript : MonoBehaviour
     public float speed;
     public GameObject PitFall;
     public float targetX;
-
-    bool play = false;
+    [SerializeField] Animator anim;
 
     public void Die()
     {
-        play = true;  
-    }
-
-    private void FixedUpdate()
-    {
-        if (play)
-            transform.position = Vector3.MoveTowards(transform.position, PitFall.transform.position, speed * Time.fixedDeltaTime);
+        anim.SetTrigger("die");
     }
 }

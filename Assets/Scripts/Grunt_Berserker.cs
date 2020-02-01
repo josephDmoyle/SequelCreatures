@@ -4,31 +4,17 @@ using UnityEngine;
 
 public class Grunt_Berserker : Grunt
 {
-    [SerializeField] Transform shootPosition = null;
-    [SerializeField] private List<Rigidbody> projectiles = new List<Rigidbody>();
-    [SerializeField] [Range(0.1f, 10f)] float countDown = 1f;
-    [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] [Range(0.1f, 10f)] float coolDown = 1f;
 
     private List<GameObject> targets = new List<GameObject>();
     private float timer = 0f, marchingSpeed = 1f;
-    private Queue<Rigidbody> magazine = new Queue<Rigidbody>();
 
     protected override void Start()
     {
         base.Start();
         beginSeeEvent.AddListener(BeginSee);
         endSeeEvent.AddListener(EndSee);
-        foreach (Rigidbody rb in projectiles)
-            magazine.Enqueue(rb);
         marchingSpeed = navMeshAgent.speed;
-    }
-
-    protected override void OnDestroy()
-    {
-        base.OnDestroy();
-        foreach (Rigidbody rb in projectiles)
-            if (rb)
-                Destroy(rb.gameObject);
     }
 
     private void FixedUpdate()
@@ -60,7 +46,7 @@ public class Grunt_Berserker : Grunt
                         navMeshAgent.isStopped = true;
 
                         timer += Time.fixedDeltaTime;
-                        if (timer >= countDown)
+                        if (timer >= coolDown)
                             state = Status.Attacking;
                     }
                     else
@@ -73,12 +59,6 @@ public class Grunt_Berserker : Grunt
 
             case Status.Attacking:
                 {
-                    Rigidbody rb = magazine.Dequeue();
-                    rb.transform.parent = null;
-                    rb.gameObject.SetActive(true);
-                    rb.position = shootPosition.position;
-                    rb.velocity = shootPosition.forward.normalized * projectileSpeed;
-                    magazine.Enqueue(rb);
                     timer = 0f;
                     state = Status.Engaging;
                     break;

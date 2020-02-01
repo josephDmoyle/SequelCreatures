@@ -641,17 +641,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 649208107, guid: d89447323f6e43446b28935e6b2d9dd3, type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 649208107, guid: d89447323f6e43446b28935e6b2d9dd3, type: 3}
       propertyPath: PitFall
       value: 
       objectReference: {fileID: 1798623951}
     - target: {fileID: 649208107, guid: d89447323f6e43446b28935e6b2d9dd3, type: 3}
-      propertyPath: targetX
-      value: -4.6
-      objectReference: {fileID: 0}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 649208110}
+    - target: {fileID: 3377952971085170294, guid: d89447323f6e43446b28935e6b2d9dd3,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 08e0d2a69fced0140b10593bceb1d99e, type: 2}
     - target: {fileID: 3473461524405635047, guid: d89447323f6e43446b28935e6b2d9dd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -660,7 +661,7 @@ PrefabInstance:
     - target: {fileID: 3473461524405635047, guid: d89447323f6e43446b28935e6b2d9dd3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.6500683
+      value: 6.65
       objectReference: {fileID: 0}
     - target: {fileID: 3473461524405635047, guid: d89447323f6e43446b28935e6b2d9dd3,
         type: 3}
@@ -732,6 +733,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2a2d07cd413894483ae0760316909c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &649208110 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3377952971085170294, guid: d89447323f6e43446b28935e6b2d9dd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 649208105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &652167067
 GameObject:
   m_ObjectHideFlags: 0

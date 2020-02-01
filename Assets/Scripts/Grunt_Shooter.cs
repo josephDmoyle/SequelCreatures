@@ -6,7 +6,7 @@ public class Grunt_Shooter : Grunt
 {
     [SerializeField] Transform shootPosition = null;
     [SerializeField] private List<Rigidbody> projectiles = new List<Rigidbody>();
-    [SerializeField] [Range(0.1f, 10f)] float countDown = 1f;
+    [SerializeField] [Range(0.1f, 10f)] float coolDown = 1f;
     [SerializeField] float projectileSpeed = 10f;
 
     private List<GameObject> targets = new List<GameObject>();
@@ -60,7 +60,7 @@ public class Grunt_Shooter : Grunt
                         navMeshAgent.isStopped = true;
 
                         timer += Time.fixedDeltaTime;
-                        if (timer >= countDown)
+                        if (timer >= coolDown)
                             state = Status.Attacking;
                     }
                     else
