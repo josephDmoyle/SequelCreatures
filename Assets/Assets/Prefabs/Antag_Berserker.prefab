@@ -72,8 +72,9 @@ GameObject:
   - component: {fileID: 5473272311981970577}
   - component: {fileID: 5473272311981970576}
   - component: {fileID: 5473272311981970607}
+  - component: {fileID: 5072428320587204041}
   m_Layer: 10
-  m_Name: Berserker
+  m_Name: Antag_Berserker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,6 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
+  wanderRange: 10
+  anim: {fileID: 5072428320587204041}
   navMeshAgent: {fileID: 5473272311981970580}
   coolDown: 0.5
   attackBox: {fileID: 7120230206131299845}
@@ -175,6 +178,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &5072428320587204041
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5473272311981970581}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f36494e7221f734bb5baa857110793f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5473272312531335386
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,3 +320,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 16
+  destroyOnDeath: 1

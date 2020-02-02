@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 22
+  destroyOnDeath: 1
 --- !u!1 &1899851110463481020
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +138,7 @@ GameObject:
   - component: {fileID: 1899851110463481016}
   - component: {fileID: 1899851110463481017}
   - component: {fileID: 1899851110463480966}
+  - component: {fileID: 4374680392838113549}
   m_Layer: 10
   m_Name: Protag_Hero
   m_TagString: Untagged
@@ -195,6 +197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
+  wanderRange: 10
+  anim: {fileID: 4374680392838113549}
   navMeshAgent: {fileID: 1899851110463481021}
   coolDown: 0.5
   attackBox: {fileID: 3709131052951950892}
@@ -240,6 +244,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &4374680392838113549
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899851110463481020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f36494e7221f734bb5baa857110793f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5721982090645056159
 GameObject:
   m_ObjectHideFlags: 0

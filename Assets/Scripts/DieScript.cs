@@ -5,6 +5,8 @@ using UnityEngine;
 public class DieScript : MonoBehaviour
 {
     [SerializeField] GameObject spawnPosition;
+    [SerializeField] float cooldownTime =5f;
+    [SerializeField] float birthTime = 3f;
     public float speed;
     public GameObject PitFall;
     public float targetX;
@@ -45,8 +47,8 @@ public class DieScript : MonoBehaviour
         anim.enabled = true;
         anim.SetTrigger("fall");
         print("Object Moved");
-        Invoke("coolDownOff", 5f);
-        Invoke("Birth", 3f);
+        Invoke("coolDownOff", cooldownTime);
+        Invoke("Birth", birthTime);
 
     }
 
