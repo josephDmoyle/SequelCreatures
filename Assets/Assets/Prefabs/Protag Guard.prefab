@@ -2022,6 +2022,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   moveSpeed: 6
   nma: {fileID: 9060316599300634551}
   keepMoving: 1
