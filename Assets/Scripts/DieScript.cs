@@ -33,6 +33,8 @@ public class DieScript : MonoBehaviour
             SacrificeIcon.sprite = Darkened;
             cooldown = true;
             anim.SetTrigger("die");
+            SFX.Playsound("aliendeath1");
+            SFX.Playsound("alienexploded");
             Invoke("SpawnNewSacrifice", 3f);
             print("Success");
         }
@@ -46,10 +48,16 @@ public class DieScript : MonoBehaviour
         transform.position = highSpot.transform.position;
         anim.enabled = true;
         anim.SetTrigger("fall");
+        Invoke("playsplat", .9f);
         print("Object Moved");
         Invoke("coolDownOff", cooldownTime);
         Invoke("Birth", birthTime);
 
+    }
+
+    void playsplat()
+    {
+        SFX.Playsound("aliendeath1");
     }
 
     void Birth()

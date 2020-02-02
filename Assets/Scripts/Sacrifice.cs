@@ -29,6 +29,7 @@ public class Sacrifice : Controllable
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Space pressed");
+            SFX.Playsound("aliendeath1");
             startSacrifice();
         }
     }
