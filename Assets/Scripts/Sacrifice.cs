@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sacrifice : MonoBehaviour
+public class Sacrifice : Controllable
 {
+    [SerializeField] CharacterController characterController = null;
     public GameObject sacrifice;
 
     public DieScript other;
@@ -15,20 +16,20 @@ public class Sacrifice : MonoBehaviour
       
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            startSacrifice();
-        }
-    }
-
     void startSacrifice()
     {
         //this object performs pushing animation
 
         other.Die();
 
+    }
+
+    public override void Control()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            startSacrifice();
+        }
     }
 }
