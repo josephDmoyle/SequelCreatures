@@ -13,7 +13,6 @@ public class Sacrifice : Controllable
     // Start is called before the first frame update
     void Start()
     {
-      
     }
 
     void startSacrifice()
