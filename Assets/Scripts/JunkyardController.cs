@@ -4,14 +4,18 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class JunkyardController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> junk = new List<GameObject>();
     [SerializeField] private List<GameObject> traps = new List<GameObject>();
-
+    [SerializeField] private GameObject spawnField;
     [SerializeField] private Slider ScavengeMeter = null;
 
-    //public static Dictionary<GameObject, Junk> currentJunk = new Dictionary<GameObject, Junk>();
+    private Vector3 spawnAreaScale;
+    private float xGround;
+    private float xCeiling;
+    private float zGround;
+    private float zCeiling;
 
     private int dumpTimer = 0;
     [SerializeField] private int dumpTime = 2000;
@@ -24,6 +28,11 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnAreaScale = spawnField.transform.localScale;
+        xGround  = -(spawnAreaScale.x) / 2;
+        zGround  = -(spawnAreaScale.y) / 2;
+        xCeiling = (spawnAreaScale.y) / 2;
+        zCeiling = (spawnAreaScale.y) / 2;
         SpawnJunk(12);
     }
 
@@ -54,14 +63,18 @@ public class GameController : MonoBehaviour
         {
             int junkIndex = (int)(Random.Range(0.0f, 0.99999999f) * (float)junk.Count);
 
-            Instantiate(junk[junkIndex], new Vector3(Random.Range(-150, -51), 0, Random.Range(-50, 50)), Quaternion.identity);
+            GameObject obj = Instantiate(junk[junkIndex], new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)), Quaternion.identity, spawnField.transform);
+            obj.transform.localPosition = (new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)));
+            obj.transform.localScale = (new Vector3(.1f, .1f, .1f));
         }
 
         for (int i = 0; i < junkAmount/2; i++)
         {
             int trapIndex = (int)(Random.Range(0.0f, 0.99999999f) * (float)traps.Count);
 
-            Instantiate(traps[trapIndex], new Vector3(Random.Range(-150, -51), 0, Random.Range(-50, 50)), Quaternion.identity);
+            GameObject obj = Instantiate(traps[trapIndex], new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(xGround, xCeiling)), Quaternion.identity, spawnField.transform);
+            obj.transform.localPosition = (new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)));
+            obj.transform.localScale = (new Vector3(.1f, .1f, .1f));
         }
 
         dumpTimer = 0;

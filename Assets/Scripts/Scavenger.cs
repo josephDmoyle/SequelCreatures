@@ -7,7 +7,7 @@ public class Scavenger : Controllable
     private float horizontal = 0;
     private float vertical = 0;
 
-    [SerializeField] private GameController GC = null;
+    [SerializeField] private JunkyardController GC = null;
 
     [SerializeField] CharacterController characterController = null;
     public override void Control()
