@@ -50,5 +50,7 @@ public class EnemySight : MonoBehaviour
     void ResumeMoving()
     {
         nma.isStopped = false;
+        animator.SetBool("isWalking", true);
+        animator.SetBool("isAttacking", false);
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpyController : Controllable
 {
-    [SerializeField] SpriteBillboard sb;
     [SerializeField] CharacterController characterController = null;
     Rigidbody rb;
     public float speed = 10.0f;
@@ -12,19 +11,29 @@ public class SpyController : Controllable
     private Vector3 raycastDirect = Vector3.right;
     public bool defeated = false;
     public Animator animator;
+    Vector3 lastPosition;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        sb.gameObject.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
         animator.GetComponent<Animator>();
-        animator.SetBool("isIdle", true);
     }
     void Update()
     {
-        
+        if (lastPosition != gameObject.transform.position)
+        {
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isWalking", false);
+        }
+        lastPosition = gameObject.transform.position;
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Sight")
@@ -45,46 +54,11 @@ public class SpyController : Controllable
 
         }
     }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Latch")
-        {
-            //Icon to attack appears
-            sb.gameObject.SetActive(true);
-            //If attack is pressed
-            if (Input.GetKey(KeyCode.Space))
-            {
-                //Change enemies tag
-                gameObject.tag = "TakeOver";
-                sb.gameObject.SetActive(false);
-            }
-        }
-    }
 
     public override void Control()
     {
         if (!defeated)
         {
-            //if (Input.GetKey(KeyCode.RightArrow))
-            //{
-            //    rb.velocity = transform.right * speed;
-            //}
-            //else if (Input.GetKey(KeyCode.LeftArrow))
-            //{
-            //    rb.velocity = -transform.right * speed;
-            //}
-            //else if (Input.GetKey(KeyCode.UpArrow))
-            //{
-            //    rb.velocity = new Vector3(0, 0, 1) * speed;
-            //}
-            //else if (Input.GetKey(KeyCode.DownArrow))
-            //{
-            //    rb.velocity = new Vector3(0, 0, -1) * speed;
-            //}
-            //else
-            //{
-            //    rb.velocity = new Vector3();
-            //}
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
 
@@ -96,9 +70,6 @@ public class SpyController : Controllable
             transform.LookAt(raycastDirect);
 
             characterController.Move(transform.forward * Time.fixedDeltaTime * speed * Mathf.Min(1.0f, (Mathf.Abs(horizontal) + Mathf.Abs(vertical))));
-            animator.SetBool("isIdle", rb.velocity.magnitude <= 0);
-            animator.SetBool("isWalking", rb.velocity.magnitude > 0);
-
         }
     }
 }

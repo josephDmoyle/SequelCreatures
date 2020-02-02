@@ -8,7 +8,8 @@ public class BuildingPrefab : MonoBehaviour, IInteractable
     public int resourcesSpent;
     public bool isFinished = false;
     private Renderer _renderer;
-    private MaterialPropertyBlock _propBlock;
+    [SerializeField] private MaterialPropertyBlock _propBlock;
+    //[SerializeField] private Material finishMaterial;
 
     void Awake()
     {
@@ -34,9 +35,9 @@ public class BuildingPrefab : MonoBehaviour, IInteractable
         {
             resourcesSpent += 1;
             Color newColor = _propBlock.GetColor("_Color");
-            newColor.b = 209f / 255f;
-            newColor.g = 209f / 255f;
-            newColor.r = 209f / 255f;
+            newColor.b = 255f;
+            newColor.g = 255f;
+            newColor.r = 255f;
             newColor.a = ((float)resourcesSpent / (float)resourceNeed);
             _propBlock.SetColor("_Color", newColor);
             _renderer.SetPropertyBlock(_propBlock);
@@ -44,6 +45,7 @@ public class BuildingPrefab : MonoBehaviour, IInteractable
         else
         {
             isFinished = true;
+            //_renderer.SetPropertyBlock(new MaterialPropertyBlock());
         }
     }
 
