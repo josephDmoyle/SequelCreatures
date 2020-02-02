@@ -8,30 +8,44 @@ public class SpyController : MonoBehaviour
     Rigidbody rb;
     public float speed = 10.0f;
     private GameObject player;
-    
+    public bool defeated = false;
+    public Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         sb.gameObject.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
+        animator.GetComponent<Animator>();
+        animator.SetBool("isIdle", true);
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (!defeated)
         {
-            rb.velocity = -transform.right * speed;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            rb.velocity = transform.right * speed;
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            rb.velocity = new Vector3(0, 0, 1) * speed;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            rb.velocity = new Vector3(0, 0, -1) * speed;
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                rb.velocity = transform.right * speed;
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                rb.velocity = -transform.right * speed;
+            }
+            else if (Input.GetKey(KeyCode.UpArrow))
+            {
+                rb.velocity = new Vector3(0, 0, 1) * speed;
+            }
+            else if (Input.GetKey(KeyCode.DownArrow))
+            {
+                rb.velocity = new Vector3(0, 0, -1) * speed;
+            }
+            else
+            {
+                rb.velocity = new Vector3();
+            }
+            animator.SetBool("isIdle", rb.velocity.magnitude <= 0);
+            animator.SetBool("isWalking", rb.velocity.magnitude > 0);
+
         }
     }
     private void OnCollisionEnter(Collision collision)

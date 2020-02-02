@@ -6,9 +6,11 @@ using UnityEngine.AI;
 public class EnemySight : MonoBehaviour
 {
     [SerializeField] FollowThePath path;
+    [SerializeField] SpyController spy;
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
     Animator animator;
+    [SerializeField] Animator spyAnimator;
 
     //  private SphereCollider col;
     private GameObject player;
@@ -16,6 +18,8 @@ public class EnemySight : MonoBehaviour
     private void Start()
     {
         animator = path.animator;
+        spyAnimator = spy.animator;
+       
     }
     void Update()
     {
@@ -45,7 +49,9 @@ public class EnemySight : MonoBehaviour
                 path.keepMoving = false;
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isAttacking", true);
-                Destroy(other.gameObject);
+                spyAnimator.SetBool("isWalking", false);
+                spyAnimator.SetBool("isDead", true);
+                spy.defeated = true;
             }
         }
 }
