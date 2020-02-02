@@ -35,7 +35,7 @@ public class Grunt_Banger : Grunt
         {
             case Status.Wandering:
                 {
-                    anim.Play("Walk");
+                    anim.SetBool("walk", true);
                     if (goal)
                     {
                         state = Status.Marching;
@@ -53,7 +53,7 @@ public class Grunt_Banger : Grunt
                 }
             case Status.Marching:
                 {
-                    anim.Play("Walk");
+                    anim.SetBool("walk", true);
                     //Go to Goal or stand still if there isn't one
                     if (goal)
                         navMeshAgent.SetDestination(goal.position);
@@ -68,7 +68,7 @@ public class Grunt_Banger : Grunt
 
             case Status.Engaging:
                 {
-                    anim.Play("Walk");
+                    anim.SetBool("walk", true);
                     targets.RemoveAll(t => t == null);
                     if (targets.Count > 0)
                     {

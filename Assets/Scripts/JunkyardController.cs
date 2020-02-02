@@ -9,8 +9,12 @@ public class JunkyardController : MonoBehaviour
     [SerializeField] private List<GameObject> junk = new List<GameObject>();
     [SerializeField] private List<GameObject> traps = new List<GameObject>();
     [SerializeField] private GameObject spawnField;
+
     [SerializeField] private Slider ScavengeMeter = null;
     [SerializeField] private Slider MaterialsMeter = null;
+
+    private float inc = 0.05f;
+    [SerializeField] private Image MaterialWarning = null;
 
     private Vector3 spawnAreaScale;
     private float xGround;
@@ -55,6 +59,19 @@ public class JunkyardController : MonoBehaviour
         else if (dumpTimer < dumpTime)
         {
             ScavengeMeter.value = ((float)dumpTimer - scavengeTime) / ((float)dumpTime - scavengeTime);
+        }
+
+        if(scavengeTimer <= 100 && scavengeTimer >= 0)
+        {
+            if ((MaterialWarning.color.a > 0.9 && inc > 0) || (MaterialWarning.color.a < 0.5 && inc < 0))
+            {
+                inc *= -1;
+            }
+            MaterialWarning.color += new Color(0,0,0,inc);
+        }
+        else
+        {
+            MaterialWarning.color = new Color(1, 1, 1, 0);
         }
 
         MaterialsMeter.value = (float)materials / (float)maxMaterials;

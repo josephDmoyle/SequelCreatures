@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class FollowThePath : MonoBehaviour
 {
     public int rotation = 90;
+    [SerializeField]public Animator animator;
     // Array of waypoints to walk from one to the next one
     [SerializeField]
     private Transform[] waypoints;
@@ -16,11 +19,13 @@ public class FollowThePath : MonoBehaviour
     // Index of current waypoint from which Enemy walks
     // to the next one
     private int waypointIndex = 0;
+    public bool keepMoving = true;
 
     // Use this for initialization
     private void Start()
     {
         transform.position = waypoints[waypointIndex].transform.position;
+        animator.GetComponent<Animator>();
         // Set position of Enemy as position of the first waypoint
 
     }
@@ -30,6 +35,12 @@ public class FollowThePath : MonoBehaviour
     { 
         // Move Enemy
         Move();
+        Attacking();
+    }
+
+    private void Attacking()
+    {
+        
     }
 
     // Method that actually make Enemy walk
@@ -37,9 +48,11 @@ public class FollowThePath : MonoBehaviour
     {
         // If Enemy didn't reach last waypoint it can move
         // If enemy reached last waypoint then it stops
-        if (waypointIndex <= waypoints.Length - 1)
+        if (waypointIndex <= waypoints.Length - 1 && keepMoving)
         {
-
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isAttacking", false);
+            animator.SetBool("isWalking", true);
             // Move Enemy from current waypoint to the next one
             // using MoveTowards method
             transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
