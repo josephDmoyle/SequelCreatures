@@ -7,6 +7,12 @@ public class WinScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("Credits");
+        if (Grunt.grunts.ContainsKey(other.gameObject))
+        {
+            if (Grunt.grunts[other.gameObject].team == Team.Antags)
+            {
+                SceneManager.LoadScene("Credits");
+            }
+        }
     }
 }
