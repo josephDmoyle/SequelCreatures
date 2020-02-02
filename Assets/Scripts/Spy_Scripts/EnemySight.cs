@@ -8,19 +8,19 @@ public class EnemySight : MonoBehaviour
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
 
-    private SphereCollider col;
+  //  private SphereCollider col;
     private GameObject player;
 
     void Awake()
     {
-        col = GetComponent<SphereCollider>();
+        //col = GetComponent<SphereCollider>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    void Update()
-    {
+  //  void Update()
+   // {
       
-    }
+   // }
 
     void OnTriggerStay(Collider other)
     {
