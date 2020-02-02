@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpyController : MonoBehaviour
 {
+    [SerializeField] SpriteBillboard sb;
     Rigidbody rb;
     public float speed = 10.0f;
     private GameObject player;
@@ -11,17 +12,18 @@ public class SpyController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        sb.gameObject.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rb.velocity = transform.right * speed;
+            rb.velocity = -transform.right * speed;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.velocity = -transform.right * speed;
+            rb.velocity = transform.right * speed;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -37,7 +39,7 @@ public class SpyController : MonoBehaviour
         if (collision.gameObject.tag == "Sight")
         {
             //Shoot the player
-
+            Vector3 target = collision.transform.position;
             //End Spy mode
             Destroy(player);
             // Timer for new Spy
@@ -57,12 +59,13 @@ public class SpyController : MonoBehaviour
         if (other.gameObject.tag == "Latch")
         {
             //Icon to attack appears
-
+            sb.gameObject.SetActive(true);
             //If attack is pressed
             if (Input.GetKey(KeyCode.Space))
             {
                 //Change enemies tag
                 gameObject.tag = "TakeOver";
+                sb.gameObject.SetActive(false);
             }
         }
     }

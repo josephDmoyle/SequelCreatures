@@ -5,22 +5,25 @@ using UnityEngine.AI;
 
 public class EnemySight : MonoBehaviour
 {
+    [SerializeField] FollowThePath path;
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
+    Animator animator;
 
-  //  private SphereCollider col;
+    //  private SphereCollider col;
     private GameObject player;
 
-    void Awake()
+    private void Start()
     {
-        //col = GetComponent<SphereCollider>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        animator = path.animator;
     }
-
-  //  void Update()
-   // {
-      
-   // }
+    void Update()
+    {
+        if(animator == null)
+        {
+            animator = path.animator;
+        }
+    }
 
     void OnTriggerStay(Collider other)
     {
@@ -33,12 +36,16 @@ public class EnemySight : MonoBehaviour
     }
 
 
-        void OnCollisionEnter(Collision other)
+        void OnTriggerEnter(Collider other)
         {
 
-            if (other.gameObject.tag == "Player")
+            if (other.gameObject.tag == "Spy")
             {
-                Destroy(player);
+                Debug.Log("ENEMY SIGHTED");
+                path.keepMoving = false;
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isAttacking", true);
+                Destroy(other.gameObject);
             }
         }
 }
