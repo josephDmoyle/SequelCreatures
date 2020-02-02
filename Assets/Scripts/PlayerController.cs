@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SelectCharacter(int newCharacter)
+    public void SelectCharacter(int newCharacter)
     {
         if(newCharacter > 3)
         {
