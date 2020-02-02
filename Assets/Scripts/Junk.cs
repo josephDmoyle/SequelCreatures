@@ -7,10 +7,15 @@ public class Junk : MonoBehaviour
     private int lifeTimer = 0;
     [SerializeField] int lifeTime = 500;
 
+    private AudioSource source;
+    [SerializeField] private AudioClip pickUp;
+    [SerializeField] private AudioClip destroyUp;
+
     // Start is called before the first frame update
     private void Awake()
     {
         //GameController.currentJunk[gameObject] = this;
+        source = GetComponent<AudioSource>();
         lifeTimer = 0;
     }
 
@@ -30,6 +35,7 @@ public class Junk : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
+        source.PlayOneShot(pickUp);
         Destroy(transform.parent.gameObject);
     }
 }
