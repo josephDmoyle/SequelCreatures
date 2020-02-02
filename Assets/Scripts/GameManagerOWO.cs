@@ -1,14 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManagerOWO : MonoBehaviour
 {
     public float countDown = 120f;
+    public float countDownMax = 120f;
+
+
     public GameObject army = null, gate = null;
 
+    [SerializeField] private Slider MovieStart = null;
+
     bool done = false, failed = false;
+
+    void Start()
+    {
+        countDown = countDownMax;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
