@@ -23,7 +23,7 @@ public class Grunt_Berserker : Grunt
         {
             case Status.Wandering:
                 {
-                    anim.Play("Walk");
+                    anim.SetBool("walk", true);
                     if (goal)
                     {
                         state = Status.Marching;
@@ -42,7 +42,7 @@ public class Grunt_Berserker : Grunt
             case Status.Marching:
                 {
                     //Go to Goal or stand still if there isn't one
-                    anim.Play("Walk");
+                    anim.SetBool("walk", true);
                     if (goal)
                         navMeshAgent.SetDestination(goal.position);
                     else
@@ -58,16 +58,18 @@ public class Grunt_Berserker : Grunt
 
             case Status.Engaging:
                 {
-                    anim.Play("Walk");
+                    anim.SetBool("walk", true);
                     targets.RemoveAll(t => t == null);
                     if (targets.Count > 0)
                     {
                         navMeshAgent.SetDestination(targets[0].transform.position);
                         if (navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance)
+                        {
                             transform.LookAt(navMeshAgent.destination);
+                            if (timer >= coolDown)
+                                state = Status.Attacking;
+                        }
                         timer += Time.fixedDeltaTime;
-                        if (timer >= coolDown)
-                            state = Status.Attacking;
                     }
                     else
                     {
@@ -78,7 +80,7 @@ public class Grunt_Berserker : Grunt
 
             case Status.Attacking:
                 {
-                    anim.Play("Attack");
+                    anim.SetTrigger("attack");
                     attackBox.gameObject.SetActive(true);
                     timer = 0f;
                     state = Status.Engaging;
