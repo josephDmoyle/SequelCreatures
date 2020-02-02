@@ -19,7 +19,7 @@ public class DieScript : MonoBehaviour
     public Sprite Darkened;
 
 
-    public Transform grunt;
+    public GameObject[] grunts;
 
     public int minimum = 2;
 
@@ -64,8 +64,7 @@ public class DieScript : MonoBehaviour
     {
         for(int i = 0; i < minimum; i++)
         {
-            Instantiate(grunt, spawnPosition.transform.position, Quaternion.identity);
-
+            Instantiate(grunts[Random.Range(0, grunts.Length)], spawnPosition.transform.position, Quaternion.identity);
         }
     }
 
