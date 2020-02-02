@@ -64,9 +64,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2a2d07cd413894483ae0760316909c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 0}
+  cooldownTime: 5
+  birthTime: 3
   speed: 0.5
   PitFall: {fileID: 0}
   targetX: -4.6
+  highSpot: {fileID: 0}
+  anim: {fileID: 0}
+  cooldown: 0
+  SacrificeIcon: {fileID: 0}
+  Original: {fileID: 0}
+  Darkened: {fileID: 0}
+  grunt: {fileID: 0}
+  minimum: 2
 --- !u!95 &3377952971085170294
 Animator:
   serializedVersion: 3
@@ -76,8 +87,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4371714507448799827}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 6ac0bfdbdd048cc42a4ebe076bcd26fe, type: 3}
+  m_Controller: {fileID: 9100000, guid: a2efc3ff72d3e8942aaedba355012dfb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
