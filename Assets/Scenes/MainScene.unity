@@ -1858,7 +1858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8472639b944fb1d4982acb43113d83a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5133,14 +5133,14 @@ MonoBehaviour:
   player: {fileID: 1675525918}
   cameras:
   - {fileID: 437755373}
-  - {fileID: 745630665}
-  - {fileID: 949624336}
   - {fileID: 1934409497}
+  - {fileID: 949624336}
+  - {fileID: 745630665}
   characters:
   - {fileID: 1675525917}
-  - {fileID: 834990474}
-  - {fileID: 1218605105}
   - {fileID: 470594928}
+  - {fileID: 1218605105}
+  - {fileID: 834990474}
 --- !u!114 &2087884336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5161,7 +5161,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []

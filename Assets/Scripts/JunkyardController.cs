@@ -18,10 +18,10 @@ public class JunkyardController : MonoBehaviour
     private float zGround;
     private float zCeiling;
 
-    private int dumpTimer = 0;
+    private int dumpTimer = 500;
     [SerializeField] private int dumpTime = 2000;
 
-    private int scavengeTimer = 0;
+    private int scavengeTimer = 500;
     [SerializeField] private int scavengeTime = 500;
 
     public int materials = 0;
@@ -35,7 +35,7 @@ public class JunkyardController : MonoBehaviour
         zGround  = -(spawnAreaScale.y) / 2;
         xCeiling = (spawnAreaScale.y) / 2;
         zCeiling = (spawnAreaScale.y) / 2;
-        SpawnJunk(12);
+        //SpawnJunk(12);
     }
 
     // Update is called once per frame
@@ -50,7 +50,7 @@ public class JunkyardController : MonoBehaviour
 
         if(scavengeTimer < scavengeTime)
         {
-            ScavengeMeter.value = (float)scavengeTimer / (float)scavengeTime;
+            ScavengeMeter.value = ((float)scavengeTime - (float)scavengeTimer) / (float)scavengeTime;
         }
         else if (dumpTimer < dumpTime)
         {
