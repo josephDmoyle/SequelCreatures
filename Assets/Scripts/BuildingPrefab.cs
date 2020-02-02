@@ -6,7 +6,7 @@ public class BuildingPrefab : MonoBehaviour, IInteractable
 {
     public int resourceNeed;
     public int resourcesSpent;
-    public bool isFinished;
+    public bool isFinished = false;
     private Renderer _renderer;
     private MaterialPropertyBlock _propBlock;
 
@@ -45,5 +45,10 @@ public class BuildingPrefab : MonoBehaviour, IInteractable
         {
             isFinished = true;
         }
+    }
+
+    public bool CheckFinished()
+    {
+        return isFinished;
     }
 }
