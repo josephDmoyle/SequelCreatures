@@ -320,7 +320,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278278149}
   m_LocalRotation: {x: 0.46043858, y: -0, z: -0, w: 0.8876916}
-  m_LocalPosition: {x: 0, y: 0, z: -274}
+  m_LocalPosition: {x: 0, y: 0, z: -319}
   m_LocalScale: {x: 0.19908574, y: 0.30072182, z: 0.19908574}
   m_Children: []
   m_Father: {fileID: 1797744010}
@@ -328,7 +328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 54.831, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.739, y: -278.8}
+  m_AnchoredPosition: {x: -47.739, y: -310}
   m_SizeDelta: {x: 576, y: 206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278278151
@@ -884,7 +884,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541442087}
   m_LocalRotation: {x: 0.46043858, y: -0, z: -0, w: 0.8876916}
-  m_LocalPosition: {x: 0, y: 0, z: -208.99997}
+  m_LocalPosition: {x: 0, y: 0, z: -235.9}
   m_LocalScale: {x: 0.25660008, y: 0.25660008, z: 0.25660008}
   m_Children: []
   m_Father: {fileID: 1797744010}
@@ -892,7 +892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 54.831, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.738754, y: -232.90001}
+  m_AnchoredPosition: {x: -47.738754, y: -251.8}
   m_SizeDelta: {x: 576, y: 206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541442089
@@ -925,17 +925,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tanner Brown
+  m_text: 'Art Lead and Animator:
+
+    Tanner Brown
+
+
+    UI/2D Art
 
     Penny Kite
+
+
+    3D/Texture Artists:
 
     Nick Dimitri
 
     Wilson Liu
 
-    Lucas Chatwin
-
-'
+    Lucas Chatwin'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a62e3e451bfb7e4c907489f086e305b, type: 2}
   m_sharedMaterial: {fileID: -5409714705832166339, guid: 7a62e3e451bfb7e4c907489f086e305b,
@@ -981,7 +987,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 13
+  m_firstOverflowCharacterIndex: 23
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1005,12 +1011,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 141.57011, z: 0, w: -5.5527554}
   m_textInfo:
     textComponent: {fileID: 541442090}
-    characterCount: 62
+    characterCount: 116
     spriteCount: 0
-    spaceCount: 10
-    wordCount: 10
+    spaceCount: 19
+    wordCount: 20
     linkCount: 0
-    lineCount: 5
+    lineCount: 10
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1512,7 +1518,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Joe Moyle\nEthan Bowen\nHayden Matthews\nSage Severson\nPeter Velasquez\n "
+  m_text: "--Lead--\nJoe Moyle\nEthan Bowen\nHayden Matthews\nSage Severson\nPeter
+    Velasquez\n "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a62e3e451bfb7e4c907489f086e305b, type: 2}
   m_sharedMaterial: {fileID: -5409714705832166339, guid: 7a62e3e451bfb7e4c907489f086e305b,
@@ -1558,7 +1565,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 10
+  m_firstOverflowCharacterIndex: 9
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1582,12 +1589,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 141.57011, z: 0, w: -5.5527554}
   m_textInfo:
     textComponent: {fileID: 917361816}
-    characterCount: 69
+    characterCount: 78
     spriteCount: 0
-    spaceCount: 11
-    wordCount: 10
+    spaceCount: 12
+    wordCount: 11
     linkCount: 0
-    lineCount: 6
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1809,7 +1816,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975120152}
   m_LocalRotation: {x: 0.46043858, y: -0, z: -0, w: 0.8876916}
-  m_LocalPosition: {x: 0, y: 0, z: -343.8}
+  m_LocalPosition: {x: 0, y: 0, z: -388.8}
   m_LocalScale: {x: 0.25660008, y: 0.25660008, z: 0.25660008}
   m_Children: []
   m_Father: {fileID: 1797744010}
@@ -1817,7 +1824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 54.831, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.738754, y: -327.9}
+  m_AnchoredPosition: {x: -47.738754, y: -359.1}
   m_SizeDelta: {x: 576, y: 206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975120154
@@ -2141,7 +2148,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025859958}
   m_CullTransparentMesh: 0
---- !u!1 &1616547588
+--- !u!1 &1383713106
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2149,23 +2156,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1616547589}
+  - component: {fileID: 1383713108}
+  - component: {fileID: 1383713107}
   m_Layer: 0
-  m_Name: Soundmanager
+  m_Name: Soundeffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1616547589
+--- !u!114 &1383713107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383713106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374d52a4f5c4bdd4f9c56d2809b80c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1383713108
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616547588}
+  m_GameObject: {fileID: 1383713106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.804697, y: 10.3292885, z: -374.96054}
+  m_LocalPosition: {x: -131.83672, y: 8.485601, z: -200.625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2274,6 +2294,7 @@ GameObject:
   - component: {fileID: 1722237165}
   - component: {fileID: 1722237164}
   - component: {fileID: 1722237163}
+  - component: {fileID: 1722237166}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -2290,7 +2311,7 @@ RectTransform:
   m_GameObject: {fileID: 1722237161}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 159.4}
-  m_LocalScale: {x: 0.25660008, y: 0.25660008, z: 0.25660008}
+  m_LocalScale: {x: 0.2566001, y: 0.2566001, z: 0.2566001}
   m_Children: []
   m_Father: {fileID: 1797744010}
   m_RootOrder: 11
@@ -2354,6 +2375,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1722237166}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1722237164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2390,6 +2422,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722237161}
   m_CullTransparentMesh: 0
+--- !u!82 &1722237166
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722237161}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2440ddfb030ef104d9ce71254dffb222, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1797744009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,6 +2557,7 @@ Transform:
   - {fileID: 278278150}
   - {fileID: 975120153}
   - {fileID: 1722237162}
+  - {fileID: 1986085931}
   m_Father: {fileID: 431878581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2601,6 +2730,184 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869358867}
   m_CullTransparentMesh: 0
+--- !u!1 &1986085930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1986085931}
+  - component: {fileID: 1986085934}
+  - component: {fileID: 1986085933}
+  - component: {fileID: 1986085932}
+  m_Layer: 5
+  m_Name: Thank you
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1986085931
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986085930}
+  m_LocalRotation: {x: 0.46043858, y: -0, z: -0, w: 0.8876916}
+  m_LocalPosition: {x: 0, y: 0, z: -494.2}
+  m_LocalScale: {x: 0.25660008, y: 0.25660008, z: 0.25660008}
+  m_Children: []
+  m_Father: {fileID: 1797744010}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 54.831, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -47.738754, y: -433.3}
+  m_SizeDelta: {x: 576, y: 206}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1986085932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986085930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb98f4c1e69bf9478c26ddf701376cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1986085933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986085930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Thank you!
+
+
+    Shangwangela 5.5 by the Crunch Munchers
+
+
+    Global Game Jam 2020
+
+
+    U of U EAE'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 7a62e3e451bfb7e4c907489f086e305b, type: 2}
+  m_sharedMaterial: {fileID: -5409714705832166339, guid: 7a62e3e451bfb7e4c907489f086e305b,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 514
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: 11
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 141.57011, z: 0, w: -5.5527554}
+  m_textInfo:
+    textComponent: {fileID: 1986085933}
+    characterCount: 85
+    spriteCount: 0
+    spaceCount: 18
+    wordCount: 17
+    linkCount: 0
+    lineCount: 7
+    pageCount: 1
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1986085934
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986085930}
+  m_CullTransparentMesh: 0
 --- !u!1 &2058320685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,11 +3008,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 882acdfbbc1e245498f2b90963f2b6ad, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
