@@ -10,6 +10,7 @@ public class EnemySight : MonoBehaviour
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
     Animator animator;
+    [SerializeField] NavMeshAgent nma = null;
     [SerializeField] Animator spyAnimator;
 
     //  private SphereCollider col;
@@ -29,29 +30,25 @@ public class EnemySight : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        //if tag eplayer collides with sphere colider or enemy collider
-        if (other.gameObject.tag == "Player")
+
+        if (other.gameObject.tag == "Spy")
         {
-            //Destory player
-            Destroy(player);
+            Debug.Log("ENEMY SIGHTED");
+            nma.isStopped = true;
+            Invoke("ResumeMoving", 2f);
+            path.keepMoving = false;
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isAttacking", true);
+            spyAnimator.SetBool("isWalking", false);
+            spyAnimator.SetBool("isDead", true);
+            spy.defeated = true;
         }
     }
 
-
-        void OnTriggerEnter(Collider other)
-        {
-
-            if (other.gameObject.tag == "Spy")
-            {
-                Debug.Log("ENEMY SIGHTED");
-                path.keepMoving = false;
-                animator.SetBool("isWalking", false);
-                animator.SetBool("isAttacking", true);
-                spyAnimator.SetBool("isWalking", false);
-                spyAnimator.SetBool("isDead", true);
-                spy.defeated = true;
-            }
-        }
+    void ResumeMoving()
+    {
+        nma.isStopped = false;
+    }
 }
