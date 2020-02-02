@@ -80,6 +80,13 @@ public class Grunt_Berserker : Grunt
 
             case Status.Attacking:
                 {
+                    int r = Random.Range(1, 3);
+                    if (r == 1)
+                        SFX.Playsound("alienchat1");
+                    else if (r == 1)
+                        SFX.Playsound("humanchatter2");
+                    else if (r == 1)
+                        SFX.Playsound("alienchat3");
                     anim.SetTrigger("attack");
                     attackBox.gameObject.SetActive(true);
                     timer = 0f;
