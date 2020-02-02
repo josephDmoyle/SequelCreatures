@@ -68,4 +68,5 @@ public enum Status
     Marching,
     Engaging,
     Attacking,
+    Dead,
 }

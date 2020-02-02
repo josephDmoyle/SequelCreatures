@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 456883098009426918}
   - component: {fileID: 7242825421001088385}
   m_Layer: 9
-  m_Name: Mesh
+  m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
