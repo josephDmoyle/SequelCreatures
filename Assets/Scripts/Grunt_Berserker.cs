@@ -84,7 +84,7 @@ public class Grunt_Berserker : Grunt
                     if (r == 1)
                         SFX.Playsound("alienchat1");
                     else if (r == 1)
-                        SFX.Playsound("humanchatter2");
+                        SFX.Playsound("alienchat2");
                     else if (r == 1)
                         SFX.Playsound("alienchat3");
                     anim.SetTrigger("attack");
