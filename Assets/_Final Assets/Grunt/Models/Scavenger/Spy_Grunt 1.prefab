@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7860185169961191047}
   - component: {fileID: 1324468840968623327}
   m_Layer: 10
-  m_Name: Spy_Grunt
+  m_Name: Spy_Grunt 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sb: {fileID: 0}
+  characterController: {fileID: 0}
   speed: 10
+  defeated: 0
+  animator: {fileID: 0}
 --- !u!1001 &1335102780385295736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +205,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2163400898958000031}
     m_Modifications:
+    - target: {fileID: -8954288668811182446, guid: 6ac0bfdbdd048cc42a4ebe076bcd26fe,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f63277f1401b48418b6ea4fa7bbec9b, type: 2}
     - target: {fileID: -6057140222963153312, guid: 6ac0bfdbdd048cc42a4ebe076bcd26fe,
         type: 3}
       propertyPath: m_Controller
