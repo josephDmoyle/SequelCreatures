@@ -92,18 +92,18 @@ public class Grunt_Shooter : Grunt
 
             case Status.Attacking:
                 {
-                    int r = Random.Range(0, 3);
-                    if(r = 1)
+                    int r = Random.Range(1, 3);
+                    if(r == 1)
                     {
-                        SFX.Playsound("aliengun1");
+                        SFX.Playsound("aliengun");
                     }
-                    else if (r = 2)
+                    else if (r == 2)
                     {
                         SFX.Playsound("aliengun2");
                     }
-                    if (r = 1)
+                    else if (r == 3)
                     {
-                        SFX.Playsound("aliengun1");
+                        SFX.Playsound("aliengun3");
                     }
                     anim.SetTrigger("attack");
                     Rigidbody rb = magazine.Dequeue();

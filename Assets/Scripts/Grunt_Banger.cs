@@ -26,6 +26,8 @@ public class Grunt_Banger : Grunt
         {
             explosion.transform.position = transform.position;
             explosion.SetActive(true);
+            SFX.Playsound("alienexploded");
+
         }
     }
 
