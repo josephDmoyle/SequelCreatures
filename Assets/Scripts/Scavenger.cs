@@ -7,6 +7,8 @@ public class Scavenger : Controllable
     private float horizontal = 0;
     private float vertical = 0;
 
+    [SerializeField] private float speed = 0.3f;
+
     [SerializeField] private JunkyardController JC = null;
 
     [SerializeField] CharacterController characterController = null;
@@ -34,7 +36,7 @@ public class Scavenger : Controllable
         }
 
         //characterController.Move(transform.right * horizontal);
-        characterController.Move(transform.forward * 0.3f);
+        characterController.Move(transform.forward * speed);
 
         transform.LookAt(new Vector3(transform.position.x + horizontal, transform.position.y, transform.position.z + vertical));
     }
