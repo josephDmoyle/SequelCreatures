@@ -8232,7 +8232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  interval: 100
+  interval: 160
   goal: {fileID: 1819509598}
 --- !u!1 &1258162491
 GameObject:
@@ -11041,7 +11041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  interval: 120
+  interval: 160
   goal: {fileID: 1241189556}
 --- !u!1 &1829463576
 GameObject:
