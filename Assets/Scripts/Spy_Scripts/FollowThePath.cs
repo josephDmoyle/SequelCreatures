@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowThePath : MonoBehaviour
 {
-
+    public int rotation = 90;
     // Array of waypoints to walk from one to the next one
     [SerializeField]
     private Transform[] waypoints;
@@ -42,16 +42,15 @@ public class FollowThePath : MonoBehaviour
 
             // Move Enemy from current waypoint to the next one
             // using MoveTowards method
-            transform.position = Vector3.MoveTowards(transform.position,
-               waypoints[waypointIndex].transform.position,
-               moveSpeed * Time.deltaTime);
-
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
+            transform.LookAt(waypoints[waypointIndex].position);
             // If Enemy reaches position of waypoint he walked towards
             // then waypointIndex is increased by 1
             // and Enemy starts to walk to the next waypoint
             if (transform.position == waypoints[waypointIndex].transform.position)
             {
                 waypointIndex += 1;
+                //transform.Rotate(0,rotation,0, Space.Self);
             }
         }
         if (waypointIndex > waypoints.Length - 1)
