@@ -87,6 +87,7 @@ public class JunkyardController : MonoBehaviour
             GameObject obj = Instantiate(junk[junkIndex], new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)), Quaternion.identity, spawnField.transform);
             obj.transform.localPosition = (new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)));
             obj.transform.localScale = (new Vector3(.1f, .1f, .1f));
+            obj.transform.Rotate(obj.transform.up * Random.Range(0, 360));
         }
 
         for (int i = 0; i < junkAmount/2; i++)
@@ -96,6 +97,7 @@ public class JunkyardController : MonoBehaviour
             GameObject obj = Instantiate(traps[trapIndex], new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(xGround, xCeiling)), Quaternion.identity, spawnField.transform);
             obj.transform.localPosition = (new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)));
             obj.transform.localScale = (new Vector3(.1f, .1f, .1f));
+            obj.transform.Rotate(obj.transform.up * Random.Range(0, 360));
         }
 
         dumpTimer = 0;
