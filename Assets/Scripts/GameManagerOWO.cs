@@ -9,7 +9,6 @@ public class GameManagerOWO : MonoBehaviour
     public float countDown = 120f;
     public float countDownMax = 120f;
 
-
     public GameObject army = null, gate = null;
 
     [SerializeField] private Slider MovieStart = null;
@@ -35,6 +34,7 @@ public class GameManagerOWO : MonoBehaviour
 
     private void FixedUpdate()
     {
+        MovieStart.value = countDown / countDownMax;
         if (!done)
         {
             countDown -= Time.fixedDeltaTime;
