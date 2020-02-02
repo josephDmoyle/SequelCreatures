@@ -29,6 +29,7 @@ public abstract class Grunt : MonoBehaviour
     protected virtual void OnDestroy()
     {
         grunts.Remove(gameObject);
+        anim.SetBool("dead", true);
     }
 
     protected virtual void Start()

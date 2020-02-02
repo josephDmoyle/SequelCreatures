@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5740a8155456d448adad7a7b82959cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unparent: {fileID: 6988104195343887587}
   hitpoints: 40
   destroyOnDeath: 1
 --- !u!1 &1899851110463481020

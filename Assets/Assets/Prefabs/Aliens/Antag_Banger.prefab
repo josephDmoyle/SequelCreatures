@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5740a8155456d448adad7a7b82959cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unparent: {fileID: 5185456679417651302}
   hitpoints: 3
   destroyOnDeath: 1
 --- !u!1 &7765208868258246571
