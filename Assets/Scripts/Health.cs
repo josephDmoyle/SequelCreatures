@@ -35,6 +35,7 @@ public class Health : MonoBehaviour
             if(unparent)
                 unparent.transform.parent = null;
             Destroy(transform.root.gameObject);
+            SFX.Playsound("humanexploded");
         }
         else
         {

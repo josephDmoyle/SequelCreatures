@@ -24,7 +24,11 @@ public class Damager_Explosion : MonoBehaviour
             if (destroyOnFinish)
                 Destroy(gameObject);
             else
+            {
+                SFX.Playsound("alienexploded");
                 gameObject.SetActive(false);
+            }
+
         }
     }
 
