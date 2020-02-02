@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: c5d4370f0ca9f5b4e8ff3510a3a6d835, type: 3}
+        m_Texture: {fileID: 2800000, guid: 97b5a0bbd6ba56d42aa1648063dad4f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
