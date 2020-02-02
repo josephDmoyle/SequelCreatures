@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: trash.ma
-//Last modified: Sun, Feb 02, 2020 10:00:07 AM
+//Last modified: Sun, Feb 02, 2020 10:04:26 AM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -10,13 +10,13 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
-fileInfo "UUID" "53D1B3F1-482F-D28B-7703-2381870505B6";
+fileInfo "UUID" "A46D4C14-4611-F0DD-6C16-5CB76F4EC286";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "F4E46A97-4D9F-B971-0108-3C9F891CBF9B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 42.962239543784847 17.72214056877241 9.12140936916553 ;
-	setAttr ".r" -type "double3" -384.93835272471608 2593.7999999960284 0 ;
+	setAttr ".t" -type "double3" 44.260617997813306 18.633378555430266 -2.6240262656501994 ;
+	setAttr ".r" -type "double3" -386.13835272471647 2609.399999996027 1.5186307438622023e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D95CD386-41F4-AB8C-EB4F-E098D89281E0";
 	setAttr -k off ".v" no;
@@ -29446,7 +29446,6 @@ createNode lambert -n "Wood";
 createNode shadingEngine -n "lambert2SG";
 	rename -uid "596D5DD4-45FB-BE08-2660-9CB65C9DA0A3";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo4";
 	rename -uid "FB4F9A65-475F-D32B-EB26-618BDAA19386";
@@ -29460,7 +29459,7 @@ createNode shadingEngine -n "lambert3SG";
 createNode materialInfo -n "materialInfo5";
 	rename -uid "5C09139C-4D23-25A2-36FD-20BE1BA9E525";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "8696E4E9-4C12-DF4B-A59C-0B9981C80BDD";
+	rename -uid "5E9BCA83-4556-1CDE-FC9F-FC8DA6341F71";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -338.09522466054096 -333.33332008785732 ;
 	setAttr ".tgi[0].vh" -type "double2" 330.35712972992997 341.07141501846826 ;

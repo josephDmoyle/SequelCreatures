@@ -47,5 +47,11 @@ public class Scavenger : Controllable
         {
             JC.materials += 10;
         }
+        if (collision.gameObject.GetComponent<Trap>() != null)
+        {
+            JC.TookDamage();
+        }
     }
+
+    
 }
