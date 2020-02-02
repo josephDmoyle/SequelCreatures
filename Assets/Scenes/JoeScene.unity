@@ -643,6 +643,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antag_Banger (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
 --- !u!1001 &71517484
@@ -1640,6 +1645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antag_Banger (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
 --- !u!1001 &284662832
@@ -1846,6 +1856,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antag_Banger (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
@@ -2517,6 +2532,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antag_Banger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
@@ -3190,6 +3210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antag_Banger (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
 --- !u!1001 &751430860
@@ -3436,6 +3461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antag_Banger (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
@@ -4780,6 +4810,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antag_Banger (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
@@ -6519,6 +6554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antag_Banger (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
@@ -8640,6 +8680,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antag_Banger (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
 --- !u!1001 &1859026292
@@ -8709,6 +8754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antag_Banger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
 --- !u!1001 &1889218424
@@ -8777,6 +8827,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antag_Banger (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473272311981970581, guid: fa54d3ad367f68e47874c258768b8565,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa54d3ad367f68e47874c258768b8565, type: 3}
