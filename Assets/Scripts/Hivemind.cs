@@ -27,7 +27,10 @@ public class Hivemind : MonoBehaviour
         if(timer >= interval)
         {
             if (pursueEvent != null)
+            {
                 pursueEvent.Invoke(goal);
+                Debug.Log(team.ToString() + " MINIONS, BEGIN MARCH ON " + goal.name);
+            }
             timer = 0f;
         }
     }

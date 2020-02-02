@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Grunt_Shooter : Grunt
 {
@@ -35,13 +36,32 @@ public class Grunt_Shooter : Grunt
     {
         switch (state)
         {
+            case Status.Wandering:
+                {
+                    anim.Play("Walk");
+                    if (goal)
+                    {
+                        state = Status.Marching;
+                        break;
+                    }
+                    if (navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance)
+                    {
+                        NavMeshHit navHit;
+                        Vector3 dir;
+                        dir = transform.position + (Random.onUnitSphere * wanderRange);
+                        NavMesh.SamplePosition(dir, out navHit, wanderRange, -1);
+                        navMeshAgent.SetDestination(navHit.position);
+                    }
+                    break;
+                }
             case Status.Marching:
                 {
+                    anim.Play("Walk");
                     //Go to Goal or stand still if there isn't one
                     if (goal)
                         navMeshAgent.SetDestination(goal.position);
                     else
-                        navMeshAgent.SetDestination(transform.position);
+                        state = Status.Wandering;
 
                     //Engage a target if there is one
                     if (targets.Count > 0)
@@ -52,6 +72,7 @@ public class Grunt_Shooter : Grunt
 
             case Status.Engaging:
                 {
+                    anim.Play("Idle");
                     targets.RemoveAll(t => t == null);
                     if (targets.Count > 0)
                     {
@@ -72,6 +93,7 @@ public class Grunt_Shooter : Grunt
 
             case Status.Attacking:
                 {
+                    anim.Play("Attack");
                     Rigidbody rb = magazine.Dequeue();
                     rb.transform.parent = null;
                     rb.gameObject.SetActive(true);
@@ -89,6 +111,7 @@ public class Grunt_Shooter : Grunt
     {
         if(grunts[iGameObject].team != team && !targets.Contains(iGameObject))
         {
+            state = Status.Engaging;
             targets.Add(iGameObject);
         }
     }
