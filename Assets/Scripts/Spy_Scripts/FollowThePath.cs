@@ -28,6 +28,7 @@ public class FollowThePath : MonoBehaviour
     {
         transform.position = waypoints[waypointIndex].transform.position;
         animator.GetComponent<Animator>();
+        animator.SetBool("isWalking", true);
         // Set position of Enemy as position of the first waypoint
 
     }
