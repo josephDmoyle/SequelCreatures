@@ -19,8 +19,10 @@ public class Builder : Controllable
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        characterController.Move(transform.right * horizontal);
-        characterController.Move(transform.forward * vertical);
+
+        transform.LookAt(new Vector3(transform.position.x + horizontal, transform.position.y, transform.position.z + vertical));
+
+        characterController.Move(transform.forward * Mathf.Min(1.0f, (Mathf.Abs(horizontal) + Mathf.Abs(vertical))));
 
         if (Input.GetButtonDown("BarrierChange"))
         {
