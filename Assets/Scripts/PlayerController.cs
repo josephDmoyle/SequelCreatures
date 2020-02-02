@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private List<GameObject> cameras = new List<GameObject>();
     [SerializeField] private List<GameObject> characters = new List<GameObject>();
 
+    [SerializeField] private JunkyardController JC = null;
+
     int currentCharacter;
 
     // Start is called before the first frame update
@@ -18,7 +20,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (player)
+        if (player && player.isActiveAndEnabled)
         {
             player.Control();
         }
@@ -39,6 +41,16 @@ public class PlayerController : MonoBehaviour
 
         cameras[currentCharacter].SetActive(false);
         player = characters[newCharacter].GetComponent<Controllable>();
+
+        if(newCharacter == 3)
+        {
+            JC.selected = true;
+        }
+        else
+        {
+            JC.selected = false;
+        }
+
         currentCharacter = newCharacter;
     }
 }

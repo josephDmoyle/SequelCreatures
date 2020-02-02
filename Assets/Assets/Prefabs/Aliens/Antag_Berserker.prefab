@@ -106,7 +106,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 10
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 100
@@ -266,7 +266,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 74a45074fad13b848a22972771bb298e,
+      objectReference: {fileID: 22100000, guid: 1330b0ba69f23684092216dfc5bb04e4,
         type: 2}
     - target: {fileID: -4216859302048453862, guid: 6ac0bfdbdd048cc42a4ebe076bcd26fe,
         type: 3}

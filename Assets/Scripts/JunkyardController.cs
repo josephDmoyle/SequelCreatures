@@ -12,6 +12,7 @@ public class JunkyardController : MonoBehaviour
 
     [SerializeField] private Slider ScavengeMeter = null;
     [SerializeField] private Slider MaterialsMeter = null;
+    [SerializeField] private Slider ScavengeHealth = null;
 
     private float inc = 0.05f;
     [SerializeField] private Image MaterialWarning = null;
@@ -22,6 +23,11 @@ public class JunkyardController : MonoBehaviour
     private float zGround;
     private float zCeiling;
 
+    [SerializeField] private float health = 10;
+    [SerializeField] private float maxHealth = 10;
+
+    public bool selected = false;
+
     private int dumpTimer = 500;
     [SerializeField] private int dumpTime = 2000;
 
@@ -31,9 +37,12 @@ public class JunkyardController : MonoBehaviour
     public int materials = 0;
     [SerializeField] private int maxMaterials = 500;
 
+    [SerializeField] private Scavenger scavenger = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        health = maxHealth;
         spawnAreaScale = spawnField.transform.localScale;
         xGround  = -(spawnAreaScale.x) / 2;
         zGround  = -(spawnAreaScale.y) / 2;
@@ -59,6 +68,16 @@ public class JunkyardController : MonoBehaviour
         else if (dumpTimer < dumpTime)
         {
             ScavengeMeter.value = ((float)dumpTimer - scavengeTime) / ((float)dumpTime - scavengeTime);
+        }
+
+        if (selected)
+        {
+            ScavengeHealth.gameObject.SetActive(true);
+            ScavengeHealth.value = health / maxHealth;
+        }
+        else
+        {
+            ScavengeHealth.gameObject.SetActive(false);
         }
 
         if(scavengeTimer <= 100 && scavengeTimer >= 0)
@@ -87,6 +106,7 @@ public class JunkyardController : MonoBehaviour
             GameObject obj = Instantiate(junk[junkIndex], new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)), Quaternion.identity, spawnField.transform);
             obj.transform.localPosition = (new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)));
             obj.transform.localScale = (new Vector3(.1f, .1f, .1f));
+            obj.transform.Rotate(obj.transform.up * Random.Range(0, 360));
         }
 
         for (int i = 0; i < junkAmount/2; i++)
@@ -96,9 +116,31 @@ public class JunkyardController : MonoBehaviour
             GameObject obj = Instantiate(traps[trapIndex], new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(xGround, xCeiling)), Quaternion.identity, spawnField.transform);
             obj.transform.localPosition = (new Vector3(Random.Range(xGround, xCeiling), 0, Random.Range(zGround, zCeiling)));
             obj.transform.localScale = (new Vector3(.1f, .1f, .1f));
+            obj.transform.Rotate(obj.transform.up * Random.Range(0, 360));
         }
 
         dumpTimer = 0;
         scavengeTimer = 0;
+    }
+
+    public void TookDamage()
+    {
+        health -= 1;
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        scavenger.gameObject.SetActive(false);
+        Invoke("Respawn", 5);
+    }
+
+    void Respawn()
+    {
+        health = maxHealth;
+        scavenger.gameObject.SetActive(true);
     }
 }

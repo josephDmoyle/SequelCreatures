@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FollowThePath : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class FollowThePath : MonoBehaviour
     // Walk speed that can be set in Inspector
     [SerializeField]
     private float moveSpeed = 2f;
+    [SerializeField] NavMeshAgent nma = null;
 
     // Index of current waypoint from which Enemy walks
     // to the next one
@@ -34,7 +36,12 @@ public class FollowThePath : MonoBehaviour
     private void Update()
     { 
         // Move Enemy
-        Move();
+        //Move();
+        if(Vector3.Distance(waypoints[waypointIndex].position, transform.position) < nma.stoppingDistance)
+        {
+            waypointIndex = (waypointIndex + 1)%waypoints.Length;
+            nma.SetDestination(waypoints[waypointIndex].position);
+        }
         Attacking();
     }
 
