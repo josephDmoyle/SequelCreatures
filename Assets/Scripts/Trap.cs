@@ -7,6 +7,6 @@ public class Trap : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        Health.healths[collision.transform.root.gameObject].Damage(1);
+        //collision.gameObject.GetComponent<Scavenger>();
     }
 }
