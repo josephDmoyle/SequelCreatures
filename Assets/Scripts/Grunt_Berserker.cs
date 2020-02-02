@@ -8,14 +8,13 @@ public class Grunt_Berserker : Grunt
     [SerializeField] Collider attackBox = null;
 
     private List<GameObject> targets = new List<GameObject>();
-    private float timer = 0f, marchingSpeed = 1f;
+    private float timer = 0f;
 
     protected override void Start()
     {
         base.Start();
         beginSeeEvent.AddListener(BeginSee);
         endSeeEvent.AddListener(EndSee);
-        marchingSpeed = navMeshAgent.speed;
     }
 
     private void FixedUpdate()
