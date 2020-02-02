@@ -14,6 +14,7 @@ public abstract class Grunt : MonoBehaviour
 
     protected Status state = Status.Wandering;
     protected Transform goal = null;
+    [SerializeField] protected Vector2 speedVariability = new Vector2(0.95f, 1.05f);
     [SerializeField] protected float wanderRange = 10f;
     [SerializeField] protected Animator anim = null;
     [SerializeField] protected NavMeshAgent navMeshAgent = null;
@@ -21,6 +22,8 @@ public abstract class Grunt : MonoBehaviour
     private void Awake()
     {
         grunts[gameObject] = this;
+        float speedBoost = Random.Range(speedVariability.x, speedVariability.y);
+        navMeshAgent.speed *= speedBoost;
     }
 
     protected virtual void OnDestroy()

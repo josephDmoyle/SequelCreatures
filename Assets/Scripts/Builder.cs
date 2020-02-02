@@ -10,8 +10,12 @@ public class Builder : Controllable
     [SerializeField] CharacterController characterController = null;
     [SerializeField] GameObject trapPrefab;
 
+    [SerializeField] private JunkyardController JC = null;
+
     private Vector3 raycastDirect = Vector3.right;
     private bool onCooldown = false;
+
+    private bool building = false;
 
     int barrierSelected = 0;
 
@@ -20,19 +24,32 @@ public class Builder : Controllable
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        transform.LookAt(new Vector3(transform.position.x + horizontal, transform.position.y, transform.position.z + vertical));
+        if (horizontal != 0 || vertical != 0)
+        {
+            raycastDirect = (transform.position + (new Vector3(horizontal, 0, vertical)).normalized);
+        }
+
+        transform.LookAt(raycastDirect);
 
         characterController.Move(transform.forward * Mathf.Min(1.0f, (Mathf.Abs(horizontal) + Mathf.Abs(vertical))));
+
+        DrawDebug();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            building = true;
+        if(Input.GetKeyUp(KeyCode.Space))
+            building = false;
 
         if (Input.GetButtonDown("BarrierChange"))
         {
             SelectedBarrier(barrierSelected + 1);
         }
 
-        if (Input.GetButton("Barrier"))
+        if (building)
         {
             if (!onCooldown)
             {
+ 
                 Invoke("Build", buildCooldown);
                 onCooldown = true;
             }
@@ -43,7 +60,7 @@ public class Builder : Controllable
             Instantiate(trapPrefab, transform.position, Quaternion.identity);
         }
 
-        DrawDebug();
+        
     }
 
     void SelectedBarrier(int choice)
@@ -58,19 +75,21 @@ public class Builder : Controllable
     void Build()
     {
         //On interact, raycast to first object in facing direction
-        Vector3 facingDirection = transform.TransformDirection(raycastDirect) * 3;
         int interactableLayerMask = LayerMask.GetMask("Interactable");
-        //RaycastHit hit = Physics.Raycast(transform.position, facingDirection, 3, interactableLayerMask);
         RaycastHit hit;
-        Physics.Raycast(transform.position, facingDirection, out hit, 3, interactableLayerMask);
+        Physics.Raycast(transform.position, transform.forward, out hit, 10, interactableLayerMask);
 
         if (hit.collider)
         {
             //If an object is hit, check if it's interactable. Should be if it's on that layer
             IInteractable interactable = hit.transform.gameObject.GetComponent<IInteractable>();
-            if (interactable != null)
+            if (interactable != null && !interactable.CheckFinished())
             {
-                interactable.Interact();
+                if (JC.materials >= 2)
+                {
+                    interactable.Interact();
+                    JC.materials -= 2;
+                }
             }
 
         }
@@ -81,8 +100,8 @@ public class Builder : Controllable
     {
         if (isDebug)
         {
-            Vector3 rayDir = transform.TransformDirection(raycastDirect) * 3;
-            Debug.DrawRay(transform.position, rayDir, Color.red);
+            //Vector3 rayDir = transform.TransformDirection(transform.forward) * 10;
+            Debug.DrawRay(transform.position, transform.forward*10, Color.red, 2.0f, false);
         }
     }
 }

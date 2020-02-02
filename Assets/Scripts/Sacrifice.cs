@@ -13,7 +13,6 @@ public class Sacrifice : Controllable
     // Start is called before the first frame update
     void Start()
     {
-      
     }
 
     void startSacrifice()
@@ -29,6 +28,7 @@ public class Sacrifice : Controllable
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Space pressed");
             startSacrifice();
         }
     }

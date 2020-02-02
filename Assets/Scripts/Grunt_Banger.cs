@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grunt_Banger : Grunt
 {
     [SerializeField] GameObject explosion = null;
-    [SerializeField] float deathSprint = 15f;
+    [SerializeField] float deathSprintMultiplier = 2f;
 
     private List<GameObject> targets = new List<GameObject>();
     private float timer = 0f, marchingSpeed = 1f;
@@ -72,7 +72,7 @@ public class Grunt_Banger : Grunt
                     targets.RemoveAll(t => t == null);
                     if (targets.Count > 0)
                     {
-                        navMeshAgent.speed = deathSprint;
+                        navMeshAgent.speed = marchingSpeed * deathSprintMultiplier;
                         navMeshAgent.SetDestination(targets[0].transform.position);
                         timer += Time.fixedDeltaTime;
                         if (Vector3.Distance(transform.position, targets[0].transform.position) < navMeshAgent.stoppingDistance)

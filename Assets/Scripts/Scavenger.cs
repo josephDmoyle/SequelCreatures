@@ -7,7 +7,7 @@ public class Scavenger : Controllable
     private float horizontal = 0;
     private float vertical = 0;
 
-    [SerializeField] private GameController GC = null;
+    [SerializeField] private JunkyardController JC = null;
 
     [SerializeField] CharacterController characterController = null;
     public override void Control()
@@ -43,7 +43,7 @@ public class Scavenger : Controllable
     {
         if(collision.gameObject.GetComponent<Junk>() != null)
         {
-            GC.materials += 10;
+            JC.materials += 10;
         }
     }
 }
