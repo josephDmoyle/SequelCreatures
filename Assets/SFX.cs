@@ -5,7 +5,7 @@ using UnityEngine;
 public class SFX : MonoBehaviour
 {
     public static AudioClip alienchat1, alienchat2, alienchat3, aliendeath1, aliendeath2, alienexploded,
-        aliengun, aliengun2, aliengun3, humanchatter, humandeath, humandeath2, humanexploded, humangun1, humangun2;
+        aliengun, aliengun2, aliengun3, humanchatter, humandeath, humandeath2, humanexploded, humangun1, clickUI, humangun2;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -26,6 +26,8 @@ public class SFX : MonoBehaviour
         humanexploded = Resources.Load<AudioClip>("humanexploded");
         humangun1 = Resources.Load<AudioClip>("humangun1");
         humangun2 = Resources.Load<AudioClip>("humangun2");
+        clickUI = Resources.Load<AudioClip>("clickUI");
+
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -84,6 +86,9 @@ public class SFX : MonoBehaviour
                 break;
             case "humangun2":
                 audioSrc.PlayOneShot(humangun2);
+                break;
+            case "clickUI":
+                audioSrc.PlayOneShot(clickUI);
                 break;
 
 
