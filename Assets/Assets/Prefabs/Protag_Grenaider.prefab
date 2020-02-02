@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 16
+  destroyOnDeath: 1
 --- !u!1 &2903017464055554109
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +138,7 @@ GameObject:
   - component: {fileID: 2903017464055554105}
   - component: {fileID: 2903017464055554104}
   - component: {fileID: 2903017464055554055}
+  - component: {fileID: 1564072381006570716}
   m_Layer: 10
   m_Name: Protag_Grenaider
   m_TagString: Untagged
@@ -198,6 +200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
+  wanderRange: 10
+  anim: {fileID: 1564072381006570716}
   navMeshAgent: {fileID: 2903017464055554108}
   shootPosition: {fileID: 3540235401940655629}
   projectiles:
@@ -248,6 +252,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &1564072381006570716
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903017464055554109}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f36494e7221f734bb5baa857110793f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9042286738550844958
 GameObject:
   m_ObjectHideFlags: 0

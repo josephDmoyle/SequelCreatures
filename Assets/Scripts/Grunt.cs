@@ -12,9 +12,10 @@ public abstract class Grunt : MonoBehaviour
     public SeeEvent beginSeeEvent = new SeeEvent(), endSeeEvent = new SeeEvent();
     public Team team = Team.Antags;
 
-    protected Status state;
+    protected Status state = Status.Wandering;
     protected Transform goal = null;
-
+    [SerializeField] protected float wanderRange = 10f;
+    [SerializeField] protected Animator anim = null;
     [SerializeField] protected NavMeshAgent navMeshAgent = null;
 
     private void Awake()
@@ -60,6 +61,7 @@ public abstract class Grunt : MonoBehaviour
 
 public enum Status
 {
+    Wandering,
     Marching,
     Engaging,
     Attacking,

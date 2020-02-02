@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     public static Dictionary<GameObject, Health> healths = new Dictionary<GameObject, Health>();
 
     [SerializeField] int hitpoints = 10;
+    [SerializeField] bool destroyOnDeath = true;
 
     private void Awake()
     {
@@ -28,6 +29,9 @@ public class Health : MonoBehaviour
 
     public void Death()
     {
-        Destroy(transform.root.gameObject);
+        if (destroyOnDeath)
+            Destroy(transform.root.gameObject);
+        else
+            transform.root.gameObject.SetActive(false);
     }
 }
