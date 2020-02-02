@@ -10,6 +10,7 @@ public class JunkyardController : MonoBehaviour
     [SerializeField] private List<GameObject> traps = new List<GameObject>();
     [SerializeField] private GameObject spawnField;
     [SerializeField] private Slider ScavengeMeter = null;
+    [SerializeField] private Slider MaterialsMeter = null;
 
     private Vector3 spawnAreaScale;
     private float xGround;
@@ -24,6 +25,7 @@ public class JunkyardController : MonoBehaviour
     [SerializeField] private int scavengeTime = 500;
 
     public int materials = 0;
+    [SerializeField] private int maxMaterials = 500;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,8 @@ public class JunkyardController : MonoBehaviour
         {
             ScavengeMeter.value = ((float)dumpTimer - scavengeTime) / ((float)dumpTime - scavengeTime);
         }
+
+        MaterialsMeter.value = (float)materials / (float)maxMaterials;
         
     }
 

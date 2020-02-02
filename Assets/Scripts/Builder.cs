@@ -10,6 +10,8 @@ public class Builder : Controllable
     [SerializeField] CharacterController characterController = null;
     [SerializeField] GameObject trapPrefab;
 
+    [SerializeField] private JunkyardController JC = null;
+
     private Vector3 raycastDirect = Vector3.right;
     private bool onCooldown = false;
 
@@ -81,9 +83,13 @@ public class Builder : Controllable
         {
             //If an object is hit, check if it's interactable. Should be if it's on that layer
             IInteractable interactable = hit.transform.gameObject.GetComponent<IInteractable>();
-            if (interactable != null)
+            if (interactable != null && !interactable.CheckFinished())
             {
-                interactable.Interact();
+                if (JC.materials >= 2)
+                {
+                    interactable.Interact();
+                    JC.materials -= 2;
+                }
             }
 
         }
