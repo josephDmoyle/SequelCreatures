@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class SpyController : MonoBehaviour
 {
     Rigidbody rb;
     public float speed = 10.0f;
+    private GameObject player;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
-    private void Update()
+    void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour
             Destroy(player);
             // Timer for new Spy
         }
-        if(collision.gameObject.tag == "Enemies")
+        if (collision.gameObject.tag == "Enemies")
         {
             //Melee the Player
 
