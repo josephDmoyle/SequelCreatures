@@ -1128,7 +1128,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GC
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1897913089}
     - target: {fileID: 2797281620840708846, guid: 396c31ffa6803cc4ebad787064d13b8a,
         type: 3}
       propertyPath: m_Name
@@ -3204,6 +3204,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1474898095}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1675525918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1779700012, guid: c6b3c5a97c7590945be5b7836bd20acc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1474898095}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675525917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3931ced352ba6744932cb02fa6036b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1745934854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3735,7 +3747,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1897913087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74602e0c2f0d87c488821d893151af99, type: 3}
+  m_Script: {fileID: 11500000, guid: c659930bb7db41c4eb79887f4666332d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   junk:
@@ -4725,7 +4737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19feab1e8adee7b4dad7b159cd294a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1675525918}
   cameras:
   - {fileID: 437755373}
   - {fileID: 745630665}

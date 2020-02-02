@@ -28,6 +28,7 @@ public class Sacrifice : Controllable
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Space pressed");
             startSacrifice();
         }
     }
