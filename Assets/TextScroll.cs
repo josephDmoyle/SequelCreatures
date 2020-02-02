@@ -8,6 +8,6 @@ public class TextScroll : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(0, .5f, 0);
+        transform.Translate(0, .2f, 0);
     }
 }
