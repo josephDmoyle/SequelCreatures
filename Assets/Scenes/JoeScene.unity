@@ -153,7 +153,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &19944120
 BoxCollider:
@@ -358,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 5473272311981970579, guid: 49b99f9cfaa68e44199cee16dc230ad8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5473272311981970579, guid: 49b99f9cfaa68e44199cee16dc230ad8,
         type: 3}
@@ -415,7 +415,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &50182601
 NavMeshObstacle:
@@ -1086,7 +1086,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &133510460
 NavMeshObstacle:
@@ -1388,7 +1388,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &179333702
 NavMeshObstacle:
@@ -2290,7 +2290,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &402577646
 NavMeshObstacle:
@@ -2495,7 +2495,7 @@ PrefabInstance:
     - target: {fileID: 5473272311981970579, guid: fa54d3ad367f68e47874c258768b8565,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 5473272311981970579, guid: fa54d3ad367f68e47874c258768b8565,
         type: 3}
@@ -3471,7 +3471,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &804546690
 NavMeshObstacle:
@@ -4158,7 +4158,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &985046824
 NavMeshObstacle:
@@ -4489,7 +4489,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1017885110
 NavMeshObstacle:
@@ -4768,7 +4768,7 @@ PrefabInstance:
     - target: {fileID: 2163400898958000031, guid: b43e7ed636b575849949e208c7776a63,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2163400898958000031, guid: b43e7ed636b575849949e208c7776a63,
         type: 3}
@@ -4840,7 +4840,7 @@ Transform:
   - {fileID: 505974706}
   - {fileID: 249969836}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1086889475
 MonoBehaviour:
@@ -4973,7 +4973,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1143414992
 NavMeshObstacle:
@@ -5316,7 +5316,7 @@ PrefabInstance:
     - target: {fileID: 1899851110463481018, guid: f45d4a38a8bb7044cba1da39a9f8e198,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1899851110463481018, guid: f45d4a38a8bb7044cba1da39a9f8e198,
         type: 3}
@@ -5438,7 +5438,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1241189557
 MonoBehaviour:
@@ -5626,7 +5626,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1287595645
 NavMeshObstacle:
@@ -6159,7 +6159,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1385850017
 NavMeshObstacle:
@@ -6628,7 +6628,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1482370032
 NavMeshObstacle:
@@ -6873,7 +6873,7 @@ PrefabInstance:
     - target: {fileID: 2903017464055554107, guid: f5f48336ea3572442ac513ac6b6486f9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2903017464055554107, guid: f5f48336ea3572442ac513ac6b6486f9,
         type: 3}
@@ -7125,7 +7125,7 @@ PrefabInstance:
     - target: {fileID: 456883098558724013, guid: 2c4a50dd9b1519c4bb210fa4810142df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 456883098558724013, guid: 2c4a50dd9b1519c4bb210fa4810142df,
         type: 3}
@@ -7717,7 +7717,7 @@ PrefabInstance:
     - target: {fileID: 2163400898958000031, guid: fc6b95d6666c1044db84ee49a20bd369,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 2163400898958000031, guid: fc6b95d6666c1044db84ee49a20bd369,
         type: 3}
@@ -8040,7 +8040,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1764009077
 NavMeshObstacle:
@@ -8298,7 +8298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1819509599
 MonoBehaviour:
@@ -8348,7 +8348,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1827503743
 NavMeshObstacle:
@@ -8844,7 +8844,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1963001386
 PrefabInstance:
@@ -9086,7 +9086,7 @@ Transform:
   m_LocalScale: {x: 5, y: 4, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &2005790257
 NavMeshObstacle:

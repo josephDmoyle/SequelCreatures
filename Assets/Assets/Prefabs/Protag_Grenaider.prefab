@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
+  speedVariability: {x: 0.85, y: 1.05}
   wanderRange: 10
   anim: {fileID: 1564072381006570716}
   navMeshAgent: {fileID: 2903017464055554108}

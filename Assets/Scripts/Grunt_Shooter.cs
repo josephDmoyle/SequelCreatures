@@ -11,7 +11,7 @@ public class Grunt_Shooter : Grunt
     [SerializeField] Vector3 projectileSpeed = Vector3.forward;
 
     private List<GameObject> targets = new List<GameObject>();
-    private float timer = 0f, marchingSpeed = 1f;
+    private float timer = 0f;
     private Queue<Rigidbody> magazine = new Queue<Rigidbody>();
 
     protected override void Start()
@@ -21,7 +21,6 @@ public class Grunt_Shooter : Grunt
         endSeeEvent.AddListener(EndSee);
         foreach (Rigidbody rb in projectiles)
             magazine.Enqueue(rb);
-        marchingSpeed = navMeshAgent.speed;
     }
 
     protected override void OnDestroy()
