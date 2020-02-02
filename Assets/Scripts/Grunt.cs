@@ -21,6 +21,7 @@ public abstract class Grunt : MonoBehaviour
 
     private void Awake()
     {
+        transform.parent = null;
         grunts[gameObject] = this;
         float speedBoost = Random.Range(speedVariability.x, speedVariability.y);
         navMeshAgent.speed *= speedBoost;
